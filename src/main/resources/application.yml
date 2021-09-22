@@ -1,8 +1,8 @@
 spring:
-#  kafka:
-#    consumer:
-#      properties:
-#        spring.json.trusted.packages: "*"
+  kafka:
+    consumer:
+      properties:
+        spring.json.trusted.packages: "*"
   application:
     name: kafka-consumer
 
