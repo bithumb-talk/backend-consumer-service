@@ -12,9 +12,9 @@ import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-public class CoinServiceImpl implements CoinService{
+public class KafkaListenerServiceImpl implements KafkaListenerService {
     private final MessageSender messageSender;
-    @KafkaListener(topics = "kafka-spring-producer-coin-test4",containerFactory = "coinKafkaListenerFactory")
+    @KafkaListener(topics = "kafka-spring-producer-coin-test5",containerFactory = "coinKafkaListenerFactory")
     public void listenHeaders(
             @Payload Quote quote,
             @Header(KafkaHeaders.RECEIVED_PARTITION_ID) int partition) throws JsonProcessingException {
