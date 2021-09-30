@@ -48,16 +48,12 @@ public class QuoteInitServiceImpl implements QuoteInitService {
         ObjectMapper mapper = new ObjectMapper();
         jsonInString = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(resultMap.getBody());
 
-
         QuoteInitBithumbResponse quoteResponseDto = mapper.readValue(jsonInString, QuoteInitBithumbResponse.class);
         String obj = mapper.writeValueAsString(quoteResponseDto.getData());
         JSONParser jsonParser = new JSONParser();
         JSONObject resultObj = (JSONObject)jsonParser.parse(obj);
 
-//        HashOperations operation = redisTemplate.opsForHash();
-
         int i;
-            //date 제거
         QuoteInitResponse[] quotes = new QuoteInitResponse[resultObj.size()-1];
         Iterator keyIterator = resultObj.keySet().iterator();
         Iterator valuesIterator = resultObj.values().iterator();
@@ -71,16 +67,18 @@ public class QuoteInitServiceImpl implements QuoteInitService {
                 values = valuesIterator.next().toString();
             }
 
-            //redis -> S3로 변경 해야 함.
-//            String korean = new String((byte[]) operation.get(symbol+"_KRW",symbol+"_KRW"),"UTF-8");
             HashMap<String, Coin> coins= coinService.getCoins();
             String korean = coins.get(symbol).getKorean();
             quotes[i].setKorean(korean);
-            JSONObject resultObj1 = (JSONObject)jsonParser.parse(values);
-            quotes[i].setClosePrice(resultObj1.get("closing_price").toString());
-            quotes[i].setChgAmt(resultObj1.get("fluctate_24H").toString());
-            quotes[i].setChgRate(resultObj1.get("fluctate_rate_24H").toString());
-            quotes[i].setTradeValue(resultObj1.get("acc_trade_value_24H").toString());
+            JSONObject QuoteObj = (JSONObject)jsonParser.parse(values);
+            quotes[i].setClosePrice(QuoteObj.get("closing_price").toString());
+            quotes[i].setChgAmt(QuoteObj.get("fluctate_24H").toString());
+            quotes[i].setChgRate(QuoteObj.get("fluctate_rate_24H").toString());
+            quotes[i].setAccTradeValue(QuoteObj.get("acc_trade_value_24H").toString());
+            quotes[i].setUnitsTraded(QuoteObj.get("units_traded_24H").toString());
+            quotes[i].setMaxPrice(QuoteObj.get("max_price").toString());
+            quotes[i].setMinPrice(QuoteObj.get("min_price").toString());
+
         }
         return quotes;
     }

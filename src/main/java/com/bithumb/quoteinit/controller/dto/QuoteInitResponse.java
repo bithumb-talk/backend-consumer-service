@@ -19,5 +19,9 @@ public class QuoteInitResponse {
     private String closePrice;
     private String chgRate;
     private String chgAmt;
-    private String TradeValue;
+    private String accTradeValue;
+    private String unitsTraded;
+    private String minPrice;
+    private String maxPrice;
+
 }
