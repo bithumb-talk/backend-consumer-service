@@ -20,14 +20,14 @@ import java.util.HashMap;
 @RequiredArgsConstructor
 @Service
 public class CoinServiceImpl implements CoinService {
-    @Value("cloud.aws.s3.bucket")
+    @Value("${cloud.aws.s3.bucket}")
     private String BUCKET_NAME;
-    @Value("cloud.aws.credentials.accessKey")
+    @Value("${cloud.aws.credentials.accessKey}")
     private String ACCESS_KEY;
-    @Value("cloud.aws.credentials.secretKey")
+    @Value("${cloud.aws.credentials.secretKey}")
     private String SECRET_KEY;
-    @Value("cloud.aws.s3.key")
-    private String key_name;
+    @Value("${cloud.aws.s3.key}")
+    private String KEY_NAME;
 
     public HashMap<String, Coin> getCoins() throws IOException {
 
@@ -38,7 +38,7 @@ public class CoinServiceImpl implements CoinService {
                 .withCredentials(new AWSStaticCredentialsProvider(new BasicAWSCredentials(ACCESS_KEY,SECRET_KEY)))
                 .withRegion(Regions.AP_NORTHEAST_2)
                 .build();
-        S3Object o = s3.getObject(BUCKET_NAME,key_name);
+        S3Object o = s3.getObject(BUCKET_NAME,KEY_NAME);
         S3ObjectInputStream s3is = o.getObjectContent();
         Coin[] coins = objectMapper.readValue(s3is, Coin[].class);
         HashMap<String, Coin> map = new HashMap<String, Coin>();
