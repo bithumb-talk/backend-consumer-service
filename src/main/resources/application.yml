@@ -15,7 +15,12 @@ cloud:
       secretKey: KFpI6M/M6TSYVTQt13MFnv9LrdU9QDzR3Kzm2Oc2 // 암호키(2)
     s3:
       bucket: youngcha-coin-service  // 버킷이름
+      key: coinlist/coin-list.json //객체경로
     region:
       static: ap-northeast-2
     stack:
       auto: false
+property:
+  kafka:
+    server: localhost:9092
+#    server: host.docker.internal:9092
