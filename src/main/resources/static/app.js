@@ -9,17 +9,17 @@ function setConnected(connected) {
     else {
         $("#conversation").hide();
     }
+    $("#greetings").html("");
 }
 
 function connect() {
-    var socket = new SockJS('ws://localhost:5020/subscribe');
-    console.log(socket)
+    var socket = new SockJS('http://host.docker.internal:8080/subscribe');
     stompClient = Stomp.over(socket);
     stompClient.connect({}, function (frame) {
         setConnected(true);
         console.log('Connected: ' + frame);
         stompClient.subscribe('/topic/coin', function (coin) {
-            console.log(JSON.parse(coin.body).closing_price);
+            console.log(JSON.parse(coin.body));
         });
     });
 }
@@ -33,11 +33,10 @@ function disconnect() {
 }
 
 
-(function() {
+$(function () {
     $("form").on('submit', function (e) {
         e.preventDefault();
     });
     $( "#connect" ).click(function() { connect(); });
     $( "#disconnect" ).click(function() { disconnect(); });
 });
-
