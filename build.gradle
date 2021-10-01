@@ -19,6 +19,8 @@ repositories {
 }
 
 dependencies {
+	//유레카
+	implementation group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-eureka-client', version: '3.0.1'
 	//SockJS
 	implementation 'org.webjars:webjars-locator-core'
 	implementation 'org.webjars:sockjs-client:1.0.2'

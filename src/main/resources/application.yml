@@ -27,3 +27,9 @@ property:
   kafka:
 #    server: localhost:9092
     server: host.docker.internal:9092
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://3.38.23.41:6020/eureka
