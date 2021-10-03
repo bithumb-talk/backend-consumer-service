@@ -14,11 +14,10 @@ public class MessageSender {
     private SimpMessagingTemplate brokerMessagingTemplate;
 
     public void sendMessage(Quote quote) throws JsonProcessingException {
-        System.out.println("sendMessage");
         ObjectMapper mapper = new ObjectMapper();
         String json=mapper.writeValueAsString(quote);
         System.out.println(json);
-        System.out.println(HtmlUtils.htmlEscape(quote.getClosePrice()));
+//        System.out.println(HtmlUtils.htmlEscape(quote.getClosePrice()));
         this.brokerMessagingTemplate.convertAndSend("/topic/coin", quote);
     }
 

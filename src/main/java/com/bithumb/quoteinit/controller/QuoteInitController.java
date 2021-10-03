@@ -1,10 +1,10 @@
 package com.bithumb.quoteinit.controller;
 
+import com.bithumb.quoteinit.controller.dto.QuoteInitResponse;
 import com.bithumb.quoteinit.service.QuoteInitServiceImpl;
 import com.bithumb.common.response.ApiResponse;
 import com.bithumb.common.response.StatusCode;
 import com.bithumb.common.response.SuccessCode;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import io.swagger.annotations.Api;
 import lombok.RequiredArgsConstructor;
 import org.json.simple.parser.ParseException;
@@ -13,7 +13,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
+import java.util.List;
 
 @Api
 @CrossOrigin(origins = "*", allowCredentials = "false")
@@ -25,10 +25,9 @@ public class QuoteInitController {
 
     @GetMapping
     public ResponseEntity<?> getQuoteInit() throws IOException, ParseException {
-
-        ApiResponse apiResponse = ApiResponse.responseMessage(StatusCode.SUCCESS,
-                SuccessCode.QUOTE_INIT_FINDALL_SUCCESS.getMessage());
-        apiResponse.setData(quoteInitService.getQuoteInit());
+        List<QuoteInitResponse> quoteInitResponses = quoteInitService.getQuoteInit();
+        ApiResponse apiResponse = ApiResponse.responseData(StatusCode.SUCCESS,
+                SuccessCode.QUOTE_INIT_FINDALL_SUCCESS.getMessage(), quoteInitResponses);
         return ResponseEntity.status(HttpStatus.OK).body(apiResponse);
     }
 }

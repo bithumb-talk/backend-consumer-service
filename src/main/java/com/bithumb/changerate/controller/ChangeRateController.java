@@ -1,5 +1,6 @@
 package com.bithumb.changerate.controller;
 
+import com.bithumb.changerate.controller.dto.SortChangedRateResponse;
 import com.bithumb.changerate.service.RateServiceImpl;
 import com.bithumb.common.response.ApiResponse;
 import com.bithumb.common.response.StatusCode;
@@ -13,6 +14,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @Api
 @CrossOrigin(origins = "*", allowCredentials = "false")
 @RestController
@@ -23,10 +26,9 @@ public class ChangeRateController {
 
     @GetMapping
     public ResponseEntity<?> getRiseCoin() {
-
-        ApiResponse apiResponse = ApiResponse.responseMessage(StatusCode.SUCCESS,
-                SuccessCode.RISE_COIN_FINDALL_SUCCESS.getMessage());
-        apiResponse.setData(riseService.getSortChangeRate());
+        List<SortChangedRateResponse> sortChangedRateResponse = riseService.getSortChangeRate();
+        ApiResponse apiResponse = ApiResponse.responseData(StatusCode.SUCCESS,
+                SuccessCode.RISE_COIN_FINDALL_SUCCESS.getMessage(),sortChangedRateResponse);
         return ResponseEntity.status(HttpStatus.OK).body(apiResponse);
     }
 }

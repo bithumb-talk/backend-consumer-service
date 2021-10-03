@@ -1,9 +1,7 @@
 package com.bithumb.consumer.service;
 
-import com.bithumb.coin.service.CoinServiceImpl;
 import com.bithumb.websocket.config.MessageSender;
 import com.bithumb.websocket.domain.Quote;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ZSetOperations;
@@ -25,9 +23,6 @@ public class KafkaListenerServiceImpl implements KafkaListenerService {
             @Payload Quote quote,
             @Header(KafkaHeaders.RECEIVED_PARTITION_ID) int partition) throws IOException {
         ZSetOperations zSetOperations = redisTemplate.opsForZSet();
-        // producer에서 한글명 세팅
-//        String korean = coinService.getCoins().get(quote.getSymbol().split("_")[0]).getKorean();
-//        quote.setKorean(korean);
         zSetOperations.add("changerate",quote.getKorean(),Double.parseDouble(quote.getChgRate()));
         System.out.println("Received Message: \n"+ quote + "\n from partition: "+ partition);
         messageSender.sendMessage(quote);

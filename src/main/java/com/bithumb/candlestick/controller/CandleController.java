@@ -1,5 +1,7 @@
 package com.bithumb.candlestick.controller;
 
+import com.bithumb.candlestick.controller.dto.CandleResponse;
+import com.bithumb.candlestick.service.CandleService;
 import com.bithumb.candlestick.service.CandleServiceImpl;
 import com.bithumb.common.response.ApiResponse;
 import com.bithumb.common.response.StatusCode;
@@ -11,6 +13,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
+import java.util.List;
+
 @Api
 @CrossOrigin(origins = "*", allowCredentials = "false")
 @RestController
@@ -20,11 +25,10 @@ public class CandleController {
     private final CandleServiceImpl candleService;
 
     @GetMapping("{symbol}/{chart_intervals}")
-    public ResponseEntity<?> getCandleStick(@PathVariable(value="symbol") String symbol, @PathVariable(value = "chart_intervals")String chart_intervals) throws JsonProcessingException {
-
-        ApiResponse apiResponse = ApiResponse.responseMessage(StatusCode.SUCCESS,
-                SuccessCode.CANDLESTICK_FINDALL_SUCCESS.getMessage());
-        apiResponse.setData(candleService.getCandleStick(symbol, chart_intervals));
+    public ResponseEntity<?> getCandleStick(@PathVariable(value="symbol") String symbol, @PathVariable(value = "chart_intervals")String chart_intervals) throws IOException {
+        List<CandleResponse> candleResponse = candleService.getCandleStick(symbol, chart_intervals);
+        ApiResponse apiResponse = ApiResponse.responseData(StatusCode.SUCCESS,
+                SuccessCode.CANDLESTICK_FINDALL_SUCCESS.getMessage(),candleResponse);
         return ResponseEntity.status(HttpStatus.OK).body(apiResponse);
     }
 }

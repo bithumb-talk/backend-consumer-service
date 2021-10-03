@@ -7,8 +7,9 @@ import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+import java.util.List;
 
 @Component
 public interface QuoteInitService {
-    public QuoteInitResponse[] getQuoteInit() throws IOException, ParseException;
+    public List<QuoteInitResponse> getQuoteInit() throws IOException, ParseException;
 }
