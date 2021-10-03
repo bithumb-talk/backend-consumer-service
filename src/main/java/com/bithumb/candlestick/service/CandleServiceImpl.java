@@ -36,7 +36,6 @@ public class CandleServiceImpl implements CandleService {
     @Override
     public List<CandleResponse> getCandleStick(String symbol, String chart_intervals) throws IOException {
         HashMap coins = coinService.getCoins();
-        Coin coin = (Coin) coins.get(symbol);
         existsCoin(coins, symbol);
         String url = uri+symbol+"_KRW/"+chart_intervals;
         UriComponents uri = UriComponentsBuilder.fromHttpUrl(url).build();
