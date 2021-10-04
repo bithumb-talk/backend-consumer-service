@@ -36,12 +36,12 @@ public class QuoteInitResponse {
         return new QuoteInitResponse(symbol,
                 korean,
                 quoteObj.get("closing_price").toString(),
-                quoteObj.get("fluctate_24H").toString(),
                 quoteObj.get("fluctate_rate_24H").toString(),
+                quoteObj.get("fluctate_24H").toString(),
                 quoteObj.get("acc_trade_value_24H").toString(),
                 quoteObj.get("units_traded_24H").toString(),
-                quoteObj.get("max_price").toString(),
-                quoteObj.get("min_price").toString()
+                quoteObj.get("min_price").toString(),
+                quoteObj.get("max_price").toString()
                 );
     }
 
