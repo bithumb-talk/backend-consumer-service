@@ -13,7 +13,7 @@ function setConnected(connected) {
 }
 
 function connect() {
-    var socket = new SockJS('http://host.docker.internal:8080/subscribe');
+    var socket = new SockJS('http://3.35.67.138:5020/subscribe');
     stompClient = Stomp.over(socket);
     stompClient.connect({}, function (frame) {
         setConnected(true);
