@@ -10,6 +10,7 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
+import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
@@ -20,23 +21,26 @@ public class Scheduler {
     private final CoinServiceImpl coinService;
     private final RedisTemplate redisTemplate;
 
+    private final NumberFormat format = NumberFormat.getInstance();
     @Scheduled(fixedDelay = 100000)
     public void scheduleFixedRateTask() throws IOException {
+        format.setGroupingUsed(false);
         ZSetOperations zSetOperations = redisTemplate.opsForZSet();
         HashMap<String, Coin> coins = coinService.getCoins();
         Iterator keyIterator = coins.keySet().iterator();
-
+        Set<ZSetOperations.TypedTuple<String>> rankSet= zSetOperations.reverseRangeWithScores("BTC_24H",0,1);
+        System.out.println(format.format(rankSet.iterator().next().getScore()));
+        System.out.println(System.currentTimeMillis());
         while(keyIterator.hasNext()) {
             String symbol = keyIterator.next().toString();
             List<CandleResponse> candles = candleService.getCandleStick(symbol,"24H");
+
             for (CandleResponse candle: candles) {
-                zSetOperations.add(symbol + "_24H", candle.getBaseTime(), Double.parseDouble(candle.getBaseTime()));
-                System.out.println(candle);
+                if ( Double.parseDouble(candle.getBaseTime()) > rankSet.iterator().next().getScore() ){
+                    zSetOperations.add(symbol + "_24H", candle.getBaseTime(),Double.parseDouble(candle.getBaseTime()) );
+                }
             }
         }
-//        Set<ZSetOperations.TypedTuple<String>> rankSet= zSetOperations.reverseRangeWithScores("BTC_24H",0,1);
-//        System.out.println(rankSet.iterator().next().getScore());
-//        System.out.println();
         System.out.println(
                 "Fixed rate task - " + System.currentTimeMillis() / 1000);
         System.out.println("Current Thread : {}"+ Thread.currentThread().getName());
