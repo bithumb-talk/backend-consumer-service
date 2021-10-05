@@ -9,6 +9,8 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.ZSetOperations;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -28,15 +30,11 @@ import java.util.Map;
 @RequiredArgsConstructor
 @Service
 public class CandleServiceImpl implements CandleService {
-    private final CoinServiceImpl coinService;
-
     @Value("${property.candlestickuri}")
     private String uri;
 
     @Override
     public List<CandleResponse> getCandleStick(String symbol, String chart_intervals) throws IOException {
-        HashMap coins = coinService.getCoins();
-        existsCoin(coins, symbol);
         String url = uri+symbol+"_KRW/"+chart_intervals;
         UriComponents uri = UriComponentsBuilder.fromHttpUrl(url).build();
         String jsonInString = "";

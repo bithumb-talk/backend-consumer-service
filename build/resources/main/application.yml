@@ -1,6 +1,6 @@
 spring:
   redis:
-    host: "redis"
+    host: "127.0.0.1"
     port: 6379
   kafka:
     consumer:
@@ -10,7 +10,7 @@ spring:
     name: consumer
 eureka:
   client:
-    register-with-eureka: true
+    register-with-eureka: true  
     fetch-registry: true
     service-url:
       defaultZone: http://3.38.23.41:8761/eureka
