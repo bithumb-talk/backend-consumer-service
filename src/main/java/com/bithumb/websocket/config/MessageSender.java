@@ -16,7 +16,6 @@ public class MessageSender {
     public void sendMessage(Quote quote) throws JsonProcessingException {
         ObjectMapper mapper = new ObjectMapper();
         String json=mapper.writeValueAsString(quote);
-        System.out.println(json);
 //        System.out.println(HtmlUtils.htmlEscape(quote.getClosePrice()));
         this.brokerMessagingTemplate.convertAndSend("/topic/coin", quote);
     }

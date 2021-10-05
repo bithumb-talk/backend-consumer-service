@@ -1,14 +1,14 @@
 package com.bithumb.candlestick.service;
 
 import com.bithumb.candlestick.controller.dto.CandleBithumbResponse;
-import com.bithumb.candlestick.controller.dto.CandleResponse;
-import com.bithumb.coin.domain.Coin;
-import com.bithumb.coin.service.CoinServiceImpl;
+import com.bithumb.candlestick.domain.CandleStick;
+import com.bithumb.changerate.controller.dto.SortChangedRateResponse;
 import com.bithumb.common.response.ErrorCode;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.ZSetOperations;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -20,23 +20,17 @@ import org.springframework.web.util.UriComponents;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @RequiredArgsConstructor
 @Service
 public class CandleServiceImpl implements CandleService {
-    private final CoinServiceImpl coinService;
-
     @Value("${property.candlestickuri}")
     private String uri;
+    private final RedisTemplate redisTemplate;
 
     @Override
-    public List<CandleResponse> getCandleStick(String symbol, String chart_intervals) throws IOException {
-        HashMap coins = coinService.getCoins();
-        existsCoin(coins, symbol);
+    public List<CandleStick> getCandleStickFromBithumb(String symbol, String chart_intervals) throws IOException {
         String url = uri+symbol+"_KRW/"+chart_intervals;
         UriComponents uri = UriComponentsBuilder.fromHttpUrl(url).build();
         String jsonInString = "";
@@ -53,13 +47,13 @@ public class CandleServiceImpl implements CandleService {
         jsonInString = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(resultMap.getBody());
 
         String[][] candles = mapper.readValue(jsonInString, CandleBithumbResponse.class).getData();
-        return CandleResponse.ofArray(candles);
-    }
-    private void existsCoin(HashMap coins, String symbol) throws IOException {
-        Boolean exsitsCoin = coins.containsKey(symbol);
-        if (!exsitsCoin) {
-            throw new SecurityException(ErrorCode.COIN_NOT_EXISTS.getMessage());
-        }
+        return CandleStick.ofArray(candles);
     }
 
+    @Override
+    public List<CandleStick> getCandleStick(String symbol, String chart_intervals) throws IOException {
+        ZSetOperations zSetOperations = redisTemplate.opsForZSet();
+        Set<ZSetOperations.TypedTuple<CandleStick>> rankSet= zSetOperations.rangeWithScores(symbol+"_"+chart_intervals,0,-1);
+        return CandleStick.ofIterater(rankSet);
+    }
 }
