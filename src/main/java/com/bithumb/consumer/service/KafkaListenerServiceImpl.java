@@ -24,7 +24,7 @@ public class KafkaListenerServiceImpl implements KafkaListenerService {
             @Header(KafkaHeaders.RECEIVED_PARTITION_ID) int partition) throws IOException {
         ZSetOperations zSetOperations = redisTemplate.opsForZSet();
         zSetOperations.add("changerate",quote.getKorean(),Double.parseDouble(quote.getChgRate()));
-        System.out.println("Received Message: \n"+ quote + "\n from partition: "+ partition);
+//        System.out.println("Received Message: \n"+ quote + "\n from partition: "+ partition);
         messageSender.sendMessage(quote);
     }
 }
