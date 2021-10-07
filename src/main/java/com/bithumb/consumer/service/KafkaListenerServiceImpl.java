@@ -18,7 +18,7 @@ import java.io.IOException;
 public class KafkaListenerServiceImpl implements KafkaListenerService {
     private final MessageSender messageSender;
     private final RedisTemplate redisTemplate;
-    @KafkaListener(topics = "kafka-spring-producer-coin-test5",containerFactory = "coinKafkaListenerFactory")
+    @KafkaListener(topics = "youngcha-coin-quote",containerFactory = "coinKafkaListenerFactory")
     public void listenHeaders(
             @Payload Quote quote,
             @Header(KafkaHeaders.RECEIVED_PARTITION_ID) int partition) throws IOException {
