@@ -15,8 +15,8 @@ import org.springframework.web.bind.annotation.*;
 import java.io.IOException;
 import java.util.List;
 
+//@CrossOrigin(origins = "*", allowCredentials = "false")
 @Api
-@CrossOrigin(origins = "*", allowCredentials = "false")
 @RestController
 @RequestMapping("/quote_init")
 @RequiredArgsConstructor

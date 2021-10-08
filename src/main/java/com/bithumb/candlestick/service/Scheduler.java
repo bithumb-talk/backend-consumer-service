@@ -20,7 +20,7 @@ public class Scheduler {
     private final RedisTemplate redisTemplate;
 
     //24시간 배치스케줄러
-    @Scheduled(fixedDelay = 100000)
+    @Scheduled(fixedDelay = 1000*60*60*24)
     public void schedule24HTask() throws IOException {
         Double lastValue;
         ZSetOperations zSetOperations = redisTemplate.opsForZSet();
@@ -53,7 +53,7 @@ public class Scheduler {
     }
 
     //1시간 배치스케줄러
-    @Scheduled(fixedDelay = 100000)
+    @Scheduled(fixedDelay = 1000*60*60)
     public void schedule1HTask() throws IOException {
         Double lastValue;
         ZSetOperations zSetOperations = redisTemplate.opsForZSet();
@@ -86,7 +86,7 @@ public class Scheduler {
     }
 
     //30분 배치 스케줄러
-    @Scheduled(fixedDelay = 100000)
+    @Scheduled(fixedDelay = 1000*60*30)
     public void schedule30MTask() throws IOException {
         Double lastValue;
         ZSetOperations zSetOperations = redisTemplate.opsForZSet();
@@ -120,7 +120,7 @@ public class Scheduler {
 
 
     //10분 배치 스케줄러
-    @Scheduled(fixedDelay = 100000)
+    @Scheduled(fixedDelay = 1000*60*10)
     public void schedule10MTask() throws IOException {
         Double lastValue;
         ZSetOperations zSetOperations = redisTemplate.opsForZSet();

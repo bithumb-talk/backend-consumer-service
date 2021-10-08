@@ -16,8 +16,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+//@CrossOrigin(origins = "*", allowCredentials = "false")
 @Api
-@CrossOrigin(origins = "*", allowCredentials = "false")
 @RestController
 @RequestMapping("/changerate")
 @RequiredArgsConstructor
