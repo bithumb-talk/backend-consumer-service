@@ -42,7 +42,7 @@ public class Scheduler {
                 if ( Double.parseDouble(candle.getBaseTime()) <= lastValue){
                     break;
                 }
-                System.out.println("[24시간 배치 스케줄러] "+symbol+", "+candle+" 추가 됨");
+//                System.out.println("[24시간 배치 스케줄러] "+symbol+", "+candle+" 추가 됨");
 
                 zSetOperations.add(symbol + "_24h", candle,Double.parseDouble(candle.getBaseTime()));
             }
@@ -75,7 +75,7 @@ public class Scheduler {
                 if ( Double.parseDouble(candle.getBaseTime()) <= lastValue){
                     break;
                 }
-                System.out.println("[1시간 배치 스케줄러] "+symbol+", "+candle+" 추가 됨");
+//                System.out.println("[1시간 배치 스케줄러] "+symbol+", "+candle+" 추가 됨");
 
                 zSetOperations.add(symbol + "_1h", candle,Double.parseDouble(candle.getBaseTime()));
             }
@@ -108,7 +108,7 @@ public class Scheduler {
                 if ( Double.parseDouble(candle.getBaseTime()) <= lastValue){
                     break;
                 }
-                System.out.println("[30분 배치 스케줄러] "+symbol+", "+candle+" 추가 됨");
+//                System.out.println("[30분 배치 스케줄러] "+symbol+", "+candle+" 추가 됨");
 
                 zSetOperations.add(symbol + "_30m", candle,Double.parseDouble(candle.getBaseTime()));
             }
@@ -142,7 +142,7 @@ public class Scheduler {
                 if ( Double.parseDouble(candle.getBaseTime()) <= lastValue){
                     break;
                 }
-                System.out.println("[10분 배치 스케줄러] "+symbol+", "+candle+" 추가 됨");
+//                System.out.println("[10분 배치 스케줄러] "+symbol+", "+candle+" 추가 됨");
 
                 zSetOperations.add(symbol + "_10m", candle,Double.parseDouble(candle.getBaseTime()));
             }
