@@ -1,7 +1,7 @@
 package com.bithumb.quoteinit.service;
 
-import com.bithumb.coin.domain.Coin;
-import com.bithumb.coin.service.CoinServiceImpl;
+import com.bithumb.utils.domain.Coin;
+import com.bithumb.utils.service.CoinServiceImpl;
 import com.bithumb.quoteinit.controller.dto.QuoteInitBithumbResponse;
 import com.bithumb.quoteinit.controller.dto.QuoteInitResponse;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -21,7 +21,6 @@ import org.springframework.web.util.UriComponents;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 import java.util.*;
 
 @RequiredArgsConstructor

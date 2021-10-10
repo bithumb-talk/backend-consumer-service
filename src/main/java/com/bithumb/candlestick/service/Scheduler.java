@@ -1,8 +1,8 @@
 package com.bithumb.candlestick.service;
 
 import com.bithumb.candlestick.domain.CandleStick;
-import com.bithumb.coin.domain.Coin;
-import com.bithumb.coin.service.CoinServiceImpl;
+import com.bithumb.utils.domain.Coin;
+import com.bithumb.utils.service.CoinServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ZSetOperations;

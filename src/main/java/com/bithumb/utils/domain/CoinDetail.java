@@ -1,4 +1,4 @@
-package com.bithumb.coin.domain;
+package com.bithumb.utils.domain;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;

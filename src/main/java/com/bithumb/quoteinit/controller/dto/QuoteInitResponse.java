@@ -1,7 +1,6 @@
 package com.bithumb.quoteinit.controller.dto;
 
-import com.bithumb.changerate.controller.dto.SortChangedRateResponse;
-import com.bithumb.coin.domain.Coin;
+import com.bithumb.utils.domain.Coin;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
@@ -11,7 +10,6 @@ import lombok.ToString;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
-import org.springframework.data.redis.core.ZSetOperations;
 
 import java.util.*;
 
