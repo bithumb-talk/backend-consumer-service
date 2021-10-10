@@ -6,7 +6,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 @EnableScheduling
-@SpringBootApplication(scanBasePackages={"com.bithumb.consumer","com.bithumb.websocket","com.bithumb.quoteinit","com.bithumb.coin","com.bithumb.candlestick","com.bithumb.common","com.bithumb.changerate"})
+@SpringBootApplication(scanBasePackages={"com.bithumb.consumer","com.bithumb.websocket","com.bithumb.quoteinit", "com.bithumb.utils","com.bithumb.candlestick","com.bithumb.common","com.bithumb.changerate"})
 @EnableEurekaClient
 public class ConsumerApplication {
 
