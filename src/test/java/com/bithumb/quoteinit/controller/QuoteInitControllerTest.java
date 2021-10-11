@@ -28,7 +28,7 @@ class QuoteInitControllerTest {
 
     @Test
     void getQuoteInit() throws Exception {
-        mockMvc.perform(get("/quite_init"))
+        mockMvc.perform(get("/quote_init"))
                 .andDo(print())
                 .andExpect(status().isOk());
     }

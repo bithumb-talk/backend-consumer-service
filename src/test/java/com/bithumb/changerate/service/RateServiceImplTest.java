@@ -9,6 +9,7 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.data.redis.core.ZSetOperations;
+import org.springframework.web.util.UriComponentsBuilder;
 
 import javax.annotation.Resource;
 import java.util.Arrays;
@@ -43,7 +44,6 @@ class RateServiceImplTest {
 
         //given
         given(zSetOperations.reverseRangeWithScores("changerate",0,-1)).willReturn(rankSet);
-
         //when
         List<SortChangedRateResponse> result = rateService.getSortChangeRate();
         //then
