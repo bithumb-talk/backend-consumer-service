@@ -52,6 +52,14 @@ dependencies {
 	testImplementation 'org.springframework.kafka:spring-kafka-test'
 	implementation 'org.springframework.integration:spring-integration-core:5.5.3'
 	implementation 'org.springframework.integration:spring-integration-kafka:5.5.3'
+
+	//로깅
+	//https://mvnrepository.com/artifact/org.slf4j/slf4j-api
+	implementation 'org.slf4j:slf4j-api:1.7.30'
+	implementation 'ch.qos.logback:logback-core:1.2.3'
+
+	//https://mvnrepository.com/artifact/ch.qos.logback/logback-classic
+	testImplementation 'ch.qos.logback:logback-classic:1.2.3'
 }
 
 test {

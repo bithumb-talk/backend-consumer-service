@@ -1,6 +1,6 @@
 spring:
   redis:
-    host: "localhost"
+    host: "redis"
     port: 6379
   kafka:
     consumer:
@@ -8,6 +8,8 @@ spring:
         spring.json.trusted.packages: "*"
   application:
     name: consumer
+  profiles:
+    active: dev
 eureka:
   client:
     register-with-eureka: true  

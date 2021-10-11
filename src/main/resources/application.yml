@@ -8,6 +8,8 @@ spring:
         spring.json.trusted.packages: "*"
   application:
     name: consumer
+  profiles:
+    active: dev
 eureka:
   client:
     register-with-eureka: true  
