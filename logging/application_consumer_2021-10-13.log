@@ -1,0 +1,1219 @@
+2021-10-13T04:48:28.960+0900  INFO 25694 --- [  restartedMain] com.bithumb.ConsumerApplication          [  55] : Starting ConsumerApplication using Java 11.0.12 on jonghyeokui-MacBookAir.local with PID 25694 (/Users/jonghyeokjeon/bithumb/youngcha/backend-consumer-service/build/classes/java/main started by jonghyeokjeon in /Users/jonghyeokjeon/bithumb/youngcha/backend-consumer-service)
+2021-10-13T04:48:28.976+0900  INFO 25694 --- [  restartedMain] com.bithumb.ConsumerApplication          [ 663] : The following profiles are active: dev
+2021-10-13T04:48:29.028+0900  INFO 25694 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor [ 255] : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-10-13T04:48:29.029+0900  INFO 25694 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor [ 255] : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-10-13T04:48:30.626+0900  INFO 25694 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate [ 262] : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-10-13T04:48:30.633+0900  INFO 25694 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate [ 132] : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-10-13T04:48:30.657+0900  INFO 25694 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate [ 201] : Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+2021-10-13T04:48:39.491+0900  WARN 25694 --- [  restartedMain] com.amazonaws.util.EC2MetadataUtils      [ 409] : Unable to retrieve the requested metadata (/latest/meta-data/instance-id). Failed to connect to service endpoint: 
+
+com.amazonaws.SdkClientException: Failed to connect to service endpoint: 
+	at com.amazonaws.internal.EC2ResourceFetcher.doReadResource(EC2ResourceFetcher.java:100)
+	at com.amazonaws.internal.EC2ResourceFetcher.doReadResource(EC2ResourceFetcher.java:70)
+	at com.amazonaws.internal.InstanceMetadataServiceResourceFetcher.readResource(InstanceMetadataServiceResourceFetcher.java:75)
+	at com.amazonaws.internal.EC2ResourceFetcher.readResource(EC2ResourceFetcher.java:66)
+	at com.amazonaws.util.EC2MetadataUtils.getItems(EC2MetadataUtils.java:402)
+	at com.amazonaws.util.EC2MetadataUtils.getData(EC2MetadataUtils.java:371)
+	at org.springframework.cloud.aws.context.support.env.AwsCloudEnvironmentCheckUtils.isRunningOnCloudEnvironment(AwsCloudEnvironmentCheckUtils.java:38)
+	at org.springframework.cloud.aws.context.annotation.OnAwsCloudEnvironmentCondition.matches(OnAwsCloudEnvironmentCondition.java:38)
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader$TrackedConditionEvaluator.shouldSkip(ConfigurationClassBeanDefinitionReader.java:489)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:140)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:129)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:343)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.bithumb.ConsumerApplication.main(ConsumerApplication.java:14)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.base/java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
+	at java.base/java.net.Socket.connect(Socket.java:608)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:177)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:474)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:569)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:341)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:362)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1253)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1232)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1081)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1015)
+	at com.amazonaws.internal.ConnectionUtils.connectToEndpoint(ConnectionUtils.java:52)
+	at com.amazonaws.internal.EC2ResourceFetcher.doReadResource(EC2ResourceFetcher.java:80)
+	... 29 common frames omitted
+
+2021-10-13T04:48:39.944+0900  INFO 25694 --- [  restartedMain] o.s.cloud.context.scope.GenericScope     [ 283] : BeanFactory id=eaf4a63a-e540-3f2c-ba58-9ff10a71976d
+2021-10-13T04:48:39.977+0900  INFO 25694 --- [  restartedMain] faultConfiguringBeanFactoryPostProcessor [ 292] : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2021-10-13T04:48:39.988+0900  INFO 25694 --- [  restartedMain] faultConfiguringBeanFactoryPostProcessor [ 292] : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2021-10-13T04:48:40.034+0900  INFO 25694 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker [ 376] : Bean '(inner bean)#283ea8db' of type [com.amazonaws.auth.BasicAWSCredentials] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-13T04:48:40.035+0900  INFO 25694 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker [ 376] : Bean '(inner bean)#63c17f05' of type [com.amazonaws.auth.AWSStaticCredentialsProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-13T04:48:40.042+0900  INFO 25694 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker [ 376] : Bean '(inner bean)#6e21a4d9' of type [com.amazonaws.auth.profile.ProfileCredentialsProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-13T04:48:40.047+0900  INFO 25694 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker [ 376] : Bean 'credentialsProvider' of type [org.springframework.cloud.aws.core.credentials.CredentialsProviderFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-13T04:48:40.048+0900  INFO 25694 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker [ 376] : Bean 'credentialsProvider' of type [com.amazonaws.auth.AWSCredentialsProviderChain] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-13T04:48:40.081+0900  INFO 25694 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker [ 376] : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-13T04:48:40.089+0900  INFO 25694 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker [ 376] : Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-13T04:48:40.092+0900  INFO 25694 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker [ 376] : Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-13T04:48:40.130+0900  INFO 25694 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker [ 376] : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-13T04:48:40.133+0900  INFO 25694 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker [ 376] : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-13T04:48:40.139+0900  INFO 25694 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker [ 376] : Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-13T04:48:40.695+0900  INFO 25694 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  [ 108] : Tomcat initialized with port(s): 5020 (http)
+2021-10-13T04:48:40.703+0900  INFO 25694 --- [  restartedMain] o.apache.catalina.core.StandardService   [ 173] : Starting service [Tomcat]
+2021-10-13T04:48:40.703+0900  INFO 25694 --- [  restartedMain] org.apache.catalina.core.StandardEngine  [ 173] : Starting Servlet engine: [Apache Tomcat/9.0.52]
+2021-10-13T04:48:40.805+0900  INFO 25694 --- [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       [ 173] : Initializing Spring embedded WebApplicationContext
+2021-10-13T04:48:40.805+0900  INFO 25694 --- [  restartedMain] w.s.c.ServletWebServerApplicationContext [ 290] : Root WebApplicationContext: initialization completed in 11775 ms
+2021-10-13T04:48:42.507+0900  INFO 25694 --- [  restartedMain] o.s.b.a.e.web.EndpointLinksResolver      [  58] : Exposing 1 endpoint(s) beneath base path '/actuator'
+2021-10-13T04:48:42.776+0900  INFO 25694 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       [  58] : LiveReload server is running on port 35729
+2021-10-13T04:48:42.795+0900  INFO 25694 --- [  restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    [  53] : Adding welcome page: class path resource [static/index.html]
+2021-10-13T04:48:44.371+0900  INFO 25694 --- [  restartedMain] DiscoveryClientOptionalArgsConfiguration [  68] : Eureka HTTP Client uses RestTemplate.
+2021-10-13T04:48:44.446+0900  WARN 25694 --- [  restartedMain] iguration$LoadBalancerCaffeineWarnLogger [  82] : Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2021-10-13T04:48:44.666+0900  INFO 25694 --- [  restartedMain] o.s.i.endpoint.EventDrivenConsumer       [ 174] : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2021-10-13T04:48:44.667+0900  INFO 25694 --- [  restartedMain] o.s.i.channel.PublishSubscribeChannel    [ 174] : Channel 'consumer.errorChannel' has 1 subscriber(s).
+2021-10-13T04:48:44.668+0900  INFO 25694 --- [  restartedMain] o.s.i.endpoint.EventDrivenConsumer       [ 292] : started bean '_org.springframework.integration.errorLogger'
+2021-10-13T04:48:44.676+0900  INFO 25694 --- [  restartedMain] o.s.c.n.eureka.InstanceInfoFactory       [  67] : Setting initial instance status as: STARTING
+2021-10-13T04:48:44.701+0900  INFO 25694 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    [ 372] : Initializing Eureka in region us-east-1
+2021-10-13T04:48:44.705+0900  INFO 25694 --- [  restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      [  43] : Resolving eureka endpoints via configuration
+2021-10-13T04:48:44.722+0900  INFO 25694 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    [1007] : Disable delta property : false
+2021-10-13T04:48:44.723+0900  INFO 25694 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    [1008] : Single vip registry refresh property : null
+2021-10-13T04:48:44.723+0900  INFO 25694 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    [1009] : Force full registry fetch : false
+2021-10-13T04:48:44.724+0900  INFO 25694 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    [1010] : Application is null : false
+2021-10-13T04:48:44.724+0900  INFO 25694 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    [1011] : Registered Applications size is zero : true
+2021-10-13T04:48:44.725+0900  INFO 25694 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    [1013] : Application version is -1: true
+2021-10-13T04:48:44.725+0900  INFO 25694 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    [1097] : Getting all instance registry info from the eureka server
+2021-10-13T04:48:44.874+0900  INFO 25694 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    [1106] : The response status is 200
+2021-10-13T04:48:44.878+0900  INFO 25694 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    [1321] : Starting heartbeat executor: renew interval is: 30
+2021-10-13T04:48:44.881+0900  INFO 25694 --- [  restartedMain] c.n.discovery.InstanceInfoReplicator     [  60] : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2021-10-13T04:48:44.886+0900  INFO 25694 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    [ 492] : Discovery Client initialized at timestamp 1634068124886 with initial instances count: 10
+2021-10-13T04:48:44.890+0900  INFO 25694 --- [  restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        [  41] : Registering application CONSUMER with eureka with status UP
+2021-10-13T04:48:44.890+0900  INFO 25694 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    [1352] : Saw local status change event StatusChangeEvent [timestamp=1634068124890, current=UP, previous=STARTING]
+2021-10-13T04:48:44.892+0900  INFO 25694 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    [ 873] : DiscoveryClient_CONSUMER/172.30.1.35:consumer:5020: registering service...
+2021-10-13T04:48:44.939+0900  INFO 25694 --- [  restartedMain] o.a.k.clients.consumer.ConsumerConfig    [ 361] : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [3.36.162.130:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-group_json-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = group_json
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	socket.connection.setup.timeout.max.ms = 127000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2021-10-13T04:48:44.987+0900  INFO 25694 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    [ 882] : DiscoveryClient_CONSUMER/172.30.1.35:consumer:5020 - registration status: 204
+2021-10-13T04:48:45.005+0900  INFO 25694 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     [ 119] : Kafka version: 2.7.1
+2021-10-13T04:48:45.006+0900  INFO 25694 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     [ 120] : Kafka commitId: 61dbce85d0d41457
+2021-10-13T04:48:45.006+0900  INFO 25694 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     [ 121] : Kafka startTimeMs: 1634068125004
+2021-10-13T04:48:45.013+0900  INFO 25694 --- [  restartedMain] o.a.k.clients.consumer.KafkaConsumer     [ 961] : [Consumer clientId=consumer-group_json-1, groupId=group_json] Subscribed to topic(s): youngcha-coin-quote
+2021-10-13T04:48:45.022+0900  INFO 25694 --- [  restartedMain] o.a.k.clients.consumer.ConsumerConfig    [ 361] : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [3.36.162.130:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-group_json-2
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = group_json
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	socket.connection.setup.timeout.max.ms = 127000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2021-10-13T04:48:45.035+0900  INFO 25694 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     [ 119] : Kafka version: 2.7.1
+2021-10-13T04:48:45.036+0900  INFO 25694 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     [ 120] : Kafka commitId: 61dbce85d0d41457
+2021-10-13T04:48:45.036+0900  INFO 25694 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     [ 121] : Kafka startTimeMs: 1634068125035
+2021-10-13T04:48:45.039+0900  INFO 25694 --- [  restartedMain] o.a.k.clients.consumer.KafkaConsumer     [ 961] : [Consumer clientId=consumer-group_json-2, groupId=group_json] Subscribed to topic(s): youngcha-coin-quote
+2021-10-13T04:48:45.047+0900  INFO 25694 --- [  restartedMain] o.a.k.clients.consumer.ConsumerConfig    [ 361] : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [3.36.162.130:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-group_json-3
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = group_json
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	socket.connection.setup.timeout.max.ms = 127000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2021-10-13T04:48:45.067+0900  INFO 25694 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     [ 119] : Kafka version: 2.7.1
+2021-10-13T04:48:45.074+0900  INFO 25694 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     [ 120] : Kafka commitId: 61dbce85d0d41457
+2021-10-13T04:48:45.074+0900  INFO 25694 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     [ 121] : Kafka startTimeMs: 1634068125067
+2021-10-13T04:48:45.076+0900  INFO 25694 --- [  restartedMain] o.a.k.clients.consumer.KafkaConsumer     [ 961] : [Consumer clientId=consumer-group_json-3, groupId=group_json] Subscribed to topic(s): youngcha-coin-quote
+2021-10-13T04:48:45.110+0900  INFO 25694 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  [ 220] : Tomcat started on port(s): 5020 (http) with context path ''
+2021-10-13T04:48:45.114+0900  INFO 25694 --- [  restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration [ 144] : Updating port to 5020
+2021-10-13T04:48:45.310+0900  INFO 25694 --- [ntainer#0-0-C-1] org.apache.kafka.clients.Metadata        [ 279] : [Consumer clientId=consumer-group_json-1, groupId=group_json] Cluster ID: AYzsL0fZSuuLKFVSGcjb1w
+2021-10-13T04:48:45.311+0900  INFO 25694 --- [ntainer#0-2-C-1] org.apache.kafka.clients.Metadata        [ 279] : [Consumer clientId=consumer-group_json-3, groupId=group_json] Cluster ID: AYzsL0fZSuuLKFVSGcjb1w
+2021-10-13T04:48:45.311+0900  INFO 25694 --- [ntainer#0-1-C-1] org.apache.kafka.clients.Metadata        [ 279] : [Consumer clientId=consumer-group_json-2, groupId=group_json] Cluster ID: AYzsL0fZSuuLKFVSGcjb1w
+2021-10-13T04:48:45.315+0900  INFO 25694 --- [ntainer#0-2-C-1] o.a.k.c.c.internals.AbstractCoordinator  [ 844] : [Consumer clientId=consumer-group_json-3, groupId=group_json] Discovered group coordinator broker-1:9092 (id: 2147483646 rack: null)
+2021-10-13T04:48:45.315+0900  INFO 25694 --- [ntainer#0-1-C-1] o.a.k.c.c.internals.AbstractCoordinator  [ 844] : [Consumer clientId=consumer-group_json-2, groupId=group_json] Discovered group coordinator broker-1:9092 (id: 2147483646 rack: null)
+2021-10-13T04:48:45.316+0900  INFO 25694 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  [ 844] : [Consumer clientId=consumer-group_json-1, groupId=group_json] Discovered group coordinator broker-1:9092 (id: 2147483646 rack: null)
+2021-10-13T04:48:45.348+0900  INFO 25694 --- [ntainer#0-1-C-1] o.a.k.c.c.internals.AbstractCoordinator  [ 538] : [Consumer clientId=consumer-group_json-2, groupId=group_json] (Re-)joining group
+2021-10-13T04:48:45.350+0900  INFO 25694 --- [ntainer#0-2-C-1] o.a.k.c.c.internals.AbstractCoordinator  [ 538] : [Consumer clientId=consumer-group_json-3, groupId=group_json] (Re-)joining group
+2021-10-13T04:48:45.348+0900  INFO 25694 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  [ 538] : [Consumer clientId=consumer-group_json-1, groupId=group_json] (Re-)joining group
+2021-10-13T04:48:45.398+0900  INFO 25694 --- [ntainer#0-1-C-1] o.a.k.c.c.internals.AbstractCoordinator  [ 538] : [Consumer clientId=consumer-group_json-2, groupId=group_json] (Re-)joining group
+2021-10-13T04:48:45.399+0900  INFO 25694 --- [ntainer#0-2-C-1] o.a.k.c.c.internals.AbstractCoordinator  [ 538] : [Consumer clientId=consumer-group_json-3, groupId=group_json] (Re-)joining group
+2021-10-13T04:48:45.398+0900  INFO 25694 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  [ 538] : [Consumer clientId=consumer-group_json-1, groupId=group_json] (Re-)joining group
+2021-10-13T04:48:45.461+0900  INFO 25694 --- [  restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     [ 137] : Starting...
+2021-10-13T04:48:45.462+0900  INFO 25694 --- [  restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     [ 137] : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@7344a6b2]]
+2021-10-13T04:48:45.462+0900  INFO 25694 --- [  restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     [ 137] : Started.
+2021-10-13T04:48:45.515+0900  INFO 25694 --- [  restartedMain] com.bithumb.ConsumerApplication          [  61] : Started ConsumerApplication in 17.228 seconds (JVM running for 23.788)
+2021-10-13T04:48:45.546+0900  WARN 25694 --- [led-task-pool-2] c.a.http.apache.utils.ApacheUtils        [ 246] : NoSuchMethodException was thrown when disabling normalizeUri. This indicates you are using an old version (< 4.5.8) of Apache http client. It is recommended to use http client version >= 4.5.9 to avoid the breaking change introduced in apache client 4.5.7 and the latency in exception handling. See https://github.com/aws/aws-sdk-java/issues/1919 for more information
+2021-10-13T04:48:46.025+0900  INFO 25694 --- [(3)-172.30.1.35] o.a.c.c.C.[Tomcat].[localhost].[/]       [ 173] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-13T04:48:46.026+0900  INFO 25694 --- [(3)-172.30.1.35] o.s.web.servlet.DispatcherServlet        [ 525] : Initializing Servlet 'dispatcherServlet'
+2021-10-13T04:48:46.028+0900  INFO 25694 --- [(3)-172.30.1.35] o.s.web.servlet.DispatcherServlet        [ 547] : Completed initialization in 2 ms
+2021-10-13T04:48:46.188+0900 ERROR 25694 --- [led-task-pool-3] o.s.s.s.TaskUtils$LoggingErrorHandler    [  95] : Unexpected error occurred in scheduled task
+
+com.amazonaws.services.s3.model.AmazonS3Exception: The AWS Access Key Id you provided does not exist in our records. (Service: Amazon S3; Status Code: 403; Error Code: InvalidAccessKeyId; Request ID: C4BETX9PXPDCJGR4; S3 Extended Request ID: 5eXayB+Isz1J+qPmvoRPg/kOWXfecMTCTguYng9j8oYx2YaL1WosV9weGYTKmbWfNo8Gc7vTjfU=; Proxy: null)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.handleErrorResponse(AmazonHttpClient.java:1811)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.handleServiceErrorResponse(AmazonHttpClient.java:1395)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.executeOneRequest(AmazonHttpClient.java:1371)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.executeHelper(AmazonHttpClient.java:1145)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.doExecute(AmazonHttpClient.java:802)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.executeWithTimer(AmazonHttpClient.java:770)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.execute(AmazonHttpClient.java:744)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.access$500(AmazonHttpClient.java:704)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutionBuilderImpl.execute(AmazonHttpClient.java:686)
+	at com.amazonaws.http.AmazonHttpClient.execute(AmazonHttpClient.java:550)
+	at com.amazonaws.http.AmazonHttpClient.execute(AmazonHttpClient.java:530)
+	at com.amazonaws.services.s3.AmazonS3Client.invoke(AmazonS3Client.java:5062)
+	at com.amazonaws.services.s3.AmazonS3Client.invoke(AmazonS3Client.java:5008)
+	at com.amazonaws.services.s3.AmazonS3Client.getObject(AmazonS3Client.java:1490)
+	at com.amazonaws.services.s3.AmazonS3Client.getObject(AmazonS3Client.java:1344)
+	at com.bithumb.utils.service.CoinServiceImpl.getCoins(CoinServiceImpl.java:41)
+	at com.bithumb.candlestick.service.Scheduler.schedule24HTask(Scheduler.java:27)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+2021-10-13T04:48:46.189+0900 ERROR 25694 --- [led-task-pool-2] o.s.s.s.TaskUtils$LoggingErrorHandler    [  95] : Unexpected error occurred in scheduled task
+
+com.amazonaws.services.s3.model.AmazonS3Exception: The AWS Access Key Id you provided does not exist in our records. (Service: Amazon S3; Status Code: 403; Error Code: InvalidAccessKeyId; Request ID: C4B7CF6C4TTRSNTV; S3 Extended Request ID: Rxovi61z+3zL1ANgdZYhZUQwdVwhdqmH3V66G/K/3ojsZLzXyvvK4YuKkWiAIv/7yJQQ/doNa80=; Proxy: null)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.handleErrorResponse(AmazonHttpClient.java:1811)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.handleServiceErrorResponse(AmazonHttpClient.java:1395)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.executeOneRequest(AmazonHttpClient.java:1371)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.executeHelper(AmazonHttpClient.java:1145)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.doExecute(AmazonHttpClient.java:802)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.executeWithTimer(AmazonHttpClient.java:770)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.execute(AmazonHttpClient.java:744)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.access$500(AmazonHttpClient.java:704)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutionBuilderImpl.execute(AmazonHttpClient.java:686)
+	at com.amazonaws.http.AmazonHttpClient.execute(AmazonHttpClient.java:550)
+	at com.amazonaws.http.AmazonHttpClient.execute(AmazonHttpClient.java:530)
+	at com.amazonaws.services.s3.AmazonS3Client.invoke(AmazonS3Client.java:5062)
+	at com.amazonaws.services.s3.AmazonS3Client.invoke(AmazonS3Client.java:5008)
+	at com.amazonaws.services.s3.AmazonS3Client.getObject(AmazonS3Client.java:1490)
+	at com.amazonaws.services.s3.AmazonS3Client.getObject(AmazonS3Client.java:1344)
+	at com.bithumb.utils.service.CoinServiceImpl.getCoins(CoinServiceImpl.java:41)
+	at com.bithumb.candlestick.service.Scheduler.schedule30MTask(Scheduler.java:93)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+2021-10-13T04:48:46.189+0900 ERROR 25694 --- [led-task-pool-1] o.s.s.s.TaskUtils$LoggingErrorHandler    [  95] : Unexpected error occurred in scheduled task
+
+com.amazonaws.services.s3.model.AmazonS3Exception: The AWS Access Key Id you provided does not exist in our records. (Service: Amazon S3; Status Code: 403; Error Code: InvalidAccessKeyId; Request ID: C4B3JSARG2ECJM3Y; S3 Extended Request ID: fMEW/biKUIT/zWJhjEIybH7O2dWT5AWqkl/cUvKl/u4hmG3NbLJzRF8AeTBcfTYU2EtMhTe7c/Y=; Proxy: null)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.handleErrorResponse(AmazonHttpClient.java:1811)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.handleServiceErrorResponse(AmazonHttpClient.java:1395)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.executeOneRequest(AmazonHttpClient.java:1371)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.executeHelper(AmazonHttpClient.java:1145)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.doExecute(AmazonHttpClient.java:802)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.executeWithTimer(AmazonHttpClient.java:770)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.execute(AmazonHttpClient.java:744)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.access$500(AmazonHttpClient.java:704)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutionBuilderImpl.execute(AmazonHttpClient.java:686)
+	at com.amazonaws.http.AmazonHttpClient.execute(AmazonHttpClient.java:550)
+	at com.amazonaws.http.AmazonHttpClient.execute(AmazonHttpClient.java:530)
+	at com.amazonaws.services.s3.AmazonS3Client.invoke(AmazonS3Client.java:5062)
+	at com.amazonaws.services.s3.AmazonS3Client.invoke(AmazonS3Client.java:5008)
+	at com.amazonaws.services.s3.AmazonS3Client.getObject(AmazonS3Client.java:1490)
+	at com.amazonaws.services.s3.AmazonS3Client.getObject(AmazonS3Client.java:1344)
+	at com.bithumb.utils.service.CoinServiceImpl.getCoins(CoinServiceImpl.java:41)
+	at com.bithumb.candlestick.service.Scheduler.schedule1HTask(Scheduler.java:60)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+2021-10-13T04:48:46.189+0900 ERROR 25694 --- [led-task-pool-4] o.s.s.s.TaskUtils$LoggingErrorHandler    [  95] : Unexpected error occurred in scheduled task
+
+com.amazonaws.services.s3.model.AmazonS3Exception: The AWS Access Key Id you provided does not exist in our records. (Service: Amazon S3; Status Code: 403; Error Code: InvalidAccessKeyId; Request ID: C4B2E4NV32205Q75; S3 Extended Request ID: 4En1HUMFoYvx6cmHRdPVwOn/qicqggrtYSYLzX91/Kn9+fW6ae6UIHhLplLKVP3v0UPBH1k9oE8=; Proxy: null)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.handleErrorResponse(AmazonHttpClient.java:1811)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.handleServiceErrorResponse(AmazonHttpClient.java:1395)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.executeOneRequest(AmazonHttpClient.java:1371)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.executeHelper(AmazonHttpClient.java:1145)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.doExecute(AmazonHttpClient.java:802)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.executeWithTimer(AmazonHttpClient.java:770)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.execute(AmazonHttpClient.java:744)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.access$500(AmazonHttpClient.java:704)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutionBuilderImpl.execute(AmazonHttpClient.java:686)
+	at com.amazonaws.http.AmazonHttpClient.execute(AmazonHttpClient.java:550)
+	at com.amazonaws.http.AmazonHttpClient.execute(AmazonHttpClient.java:530)
+	at com.amazonaws.services.s3.AmazonS3Client.invoke(AmazonS3Client.java:5062)
+	at com.amazonaws.services.s3.AmazonS3Client.invoke(AmazonS3Client.java:5008)
+	at com.amazonaws.services.s3.AmazonS3Client.getObject(AmazonS3Client.java:1490)
+	at com.amazonaws.services.s3.AmazonS3Client.getObject(AmazonS3Client.java:1344)
+	at com.bithumb.utils.service.CoinServiceImpl.getCoins(CoinServiceImpl.java:41)
+	at com.bithumb.candlestick.service.Scheduler.schedule10MTask(Scheduler.java:127)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+2021-10-13T04:48:47.268+0900  INFO 25694 --- [ntainer#0-1-C-1] o.a.k.c.c.internals.AbstractCoordinator  [ 594] : [Consumer clientId=consumer-group_json-2, groupId=group_json] Successfully joined group with generation Generation{generationId=395, memberId='consumer-group_json-2-3b85b6ef-cc0a-4092-9799-b81c4b820b75', protocol='range'}
+2021-10-13T04:48:47.268+0900  INFO 25694 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  [ 594] : [Consumer clientId=consumer-group_json-1, groupId=group_json] Successfully joined group with generation Generation{generationId=395, memberId='consumer-group_json-1-c8ca8e07-0635-4c81-8ea5-9fd175ec0408', protocol='range'}
+2021-10-13T04:48:47.268+0900  INFO 25694 --- [ntainer#0-2-C-1] o.a.k.c.c.internals.AbstractCoordinator  [ 594] : [Consumer clientId=consumer-group_json-3, groupId=group_json] Successfully joined group with generation Generation{generationId=395, memberId='consumer-group_json-3-c880b907-ee9a-44b4-9859-3c21d4bf28d7', protocol='range'}
+2021-10-13T04:48:47.292+0900  INFO 25694 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  [ 754] : [Consumer clientId=consumer-group_json-1, groupId=group_json] Successfully synced group in generation Generation{generationId=395, memberId='consumer-group_json-1-c8ca8e07-0635-4c81-8ea5-9fd175ec0408', protocol='range'}
+2021-10-13T04:48:47.291+0900  INFO 25694 --- [ntainer#0-1-C-1] o.a.k.c.c.internals.AbstractCoordinator  [ 754] : [Consumer clientId=consumer-group_json-2, groupId=group_json] Successfully synced group in generation Generation{generationId=395, memberId='consumer-group_json-2-3b85b6ef-cc0a-4092-9799-b81c4b820b75', protocol='range'}
+2021-10-13T04:48:47.291+0900  INFO 25694 --- [ntainer#0-2-C-1] o.a.k.c.c.internals.AbstractCoordinator  [ 754] : [Consumer clientId=consumer-group_json-3, groupId=group_json] Successfully synced group in generation Generation{generationId=395, memberId='consumer-group_json-3-c880b907-ee9a-44b4-9859-3c21d4bf28d7', protocol='range'}
+2021-10-13T04:48:47.302+0900  INFO 25694 --- [ntainer#0-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  [ 276] : [Consumer clientId=consumer-group_json-3, groupId=group_json] Notifying assignor about the new Assignment(partitions=[])
+2021-10-13T04:48:47.302+0900  INFO 25694 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  [ 276] : [Consumer clientId=consumer-group_json-1, groupId=group_json] Notifying assignor about the new Assignment(partitions=[youngcha-coin-quote-1])
+2021-10-13T04:48:47.302+0900  INFO 25694 --- [ntainer#0-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  [ 288] : [Consumer clientId=consumer-group_json-3, groupId=group_json] Adding newly assigned partitions: 
+2021-10-13T04:48:47.302+0900  INFO 25694 --- [ntainer#0-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  [ 276] : [Consumer clientId=consumer-group_json-2, groupId=group_json] Notifying assignor about the new Assignment(partitions=[youngcha-coin-quote-2])
+2021-10-13T04:48:47.304+0900  INFO 25694 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  [ 288] : [Consumer clientId=consumer-group_json-1, groupId=group_json] Adding newly assigned partitions: youngcha-coin-quote-1
+2021-10-13T04:48:47.304+0900  INFO 25694 --- [ntainer#0-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  [ 288] : [Consumer clientId=consumer-group_json-2, groupId=group_json] Adding newly assigned partitions: youngcha-coin-quote-2
+2021-10-13T04:48:47.304+0900  INFO 25694 --- [ntainer#0-2-C-1] o.s.k.l.KafkaMessageListenerContainer    [ 292] : group_json: partitions assigned: []
+2021-10-13T04:48:47.325+0900  INFO 25694 --- [ntainer#0-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  [ 820] : [Consumer clientId=consumer-group_json-2, groupId=group_json] Setting offset for partition youngcha-coin-quote-2 to the committed offset FetchPosition{offset=335075, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[broker-2:9092 (id: 2 rack: null)], epoch=0}}
+2021-10-13T04:48:47.325+0900  INFO 25694 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  [ 820] : [Consumer clientId=consumer-group_json-1, groupId=group_json] Setting offset for partition youngcha-coin-quote-1 to the committed offset FetchPosition{offset=335772, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[broker-1:9092 (id: 1 rack: null)], epoch=0}}
+2021-10-13T04:48:47.326+0900  INFO 25694 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    [ 292] : group_json: partitions assigned: [youngcha-coin-quote-1]
+2021-10-13T04:48:47.326+0900  INFO 25694 --- [ntainer#0-1-C-1] o.s.k.l.KafkaMessageListenerContainer    [ 292] : group_json: partitions assigned: [youngcha-coin-quote-2]
+2021-10-13T04:49:42.639+0900  INFO 25694 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    [ 126] : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2021-10-13T04:49:50.900+0900  INFO 25694 --- [ionShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        [  62] : Unregistering application CONSUMER with eureka with status DOWN
+2021-10-13T04:49:50.902+0900  INFO 25694 --- [ionShutdownHook] com.netflix.discovery.DiscoveryClient    [1352] : Saw local status change event StatusChangeEvent [timestamp=1634068190902, current=DOWN, previous=UP]
+2021-10-13T04:49:50.903+0900  INFO 25694 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    [ 873] : DiscoveryClient_CONSUMER/172.30.1.35:consumer:5020: registering service...
+2021-10-13T04:49:50.915+0900  INFO 25694 --- [ionShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     [ 137] : Stopping...
+2021-10-13T04:49:50.916+0900  INFO 25694 --- [ionShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     [ 137] : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@7344a6b2]]
+2021-10-13T04:49:50.916+0900  INFO 25694 --- [ionShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     [ 137] : Stopped.
+2021-10-13T04:49:50.924+0900  INFO 25694 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    [ 882] : DiscoveryClient_CONSUMER/172.30.1.35:consumer:5020 - registration status: 204
+2021-10-13T04:49:50.975+0900  INFO 25694 --- [ntainer#0-2-C-1] o.a.k.c.c.internals.AbstractCoordinator  [1038] : [Consumer clientId=consumer-group_json-3, groupId=group_json] Member consumer-group_json-3-c880b907-ee9a-44b4-9859-3c21d4bf28d7 sending LeaveGroup request to coordinator broker-1:9092 (id: 2147483646 rack: null) due to the consumer unsubscribed from all topics
+2021-10-13T04:49:50.975+0900  INFO 25694 --- [ntainer#0-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  [ 307] : [Consumer clientId=consumer-group_json-2, groupId=group_json] Revoke previously assigned partitions youngcha-coin-quote-2
+2021-10-13T04:49:50.975+0900  INFO 25694 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  [ 307] : [Consumer clientId=consumer-group_json-1, groupId=group_json] Revoke previously assigned partitions youngcha-coin-quote-1
+2021-10-13T04:49:50.977+0900  INFO 25694 --- [ntainer#0-1-C-1] o.s.k.l.KafkaMessageListenerContainer    [ 292] : group_json: partitions revoked: [youngcha-coin-quote-2]
+2021-10-13T04:49:50.977+0900  INFO 25694 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    [ 292] : group_json: partitions revoked: [youngcha-coin-quote-1]
+2021-10-13T04:49:50.978+0900  INFO 25694 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  [1038] : [Consumer clientId=consumer-group_json-1, groupId=group_json] Member consumer-group_json-1-c8ca8e07-0635-4c81-8ea5-9fd175ec0408 sending LeaveGroup request to coordinator broker-1:9092 (id: 2147483646 rack: null) due to the consumer unsubscribed from all topics
+2021-10-13T04:49:50.978+0900  INFO 25694 --- [ntainer#0-1-C-1] o.a.k.c.c.internals.AbstractCoordinator  [1038] : [Consumer clientId=consumer-group_json-2, groupId=group_json] Member consumer-group_json-2-3b85b6ef-cc0a-4092-9799-b81c4b820b75 sending LeaveGroup request to coordinator broker-1:9092 (id: 2147483646 rack: null) due to the consumer unsubscribed from all topics
+2021-10-13T04:49:50.979+0900  INFO 25694 --- [ntainer#0-1-C-1] o.a.k.clients.consumer.KafkaConsumer     [1070] : [Consumer clientId=consumer-group_json-2, groupId=group_json] Unsubscribed all topics or patterns and assigned partitions
+2021-10-13T04:49:50.979+0900  INFO 25694 --- [ntainer#0-0-C-1] o.a.k.clients.consumer.KafkaConsumer     [1070] : [Consumer clientId=consumer-group_json-1, groupId=group_json] Unsubscribed all topics or patterns and assigned partitions
+2021-10-13T04:49:50.979+0900  INFO 25694 --- [ntainer#0-2-C-1] o.a.k.clients.consumer.KafkaConsumer     [1070] : [Consumer clientId=consumer-group_json-3, groupId=group_json] Unsubscribed all topics or patterns and assigned partitions
+2021-10-13T04:49:51.004+0900  INFO 25694 --- [ntainer#0-2-C-1] org.apache.kafka.common.metrics.Metrics  [ 668] : Metrics scheduler closed
+2021-10-13T04:49:51.004+0900  INFO 25694 --- [ntainer#0-1-C-1] org.apache.kafka.common.metrics.Metrics  [ 668] : Metrics scheduler closed
+2021-10-13T04:49:51.004+0900  INFO 25694 --- [ntainer#0-0-C-1] org.apache.kafka.common.metrics.Metrics  [ 668] : Metrics scheduler closed
+2021-10-13T04:49:51.007+0900  INFO 25694 --- [ntainer#0-0-C-1] org.apache.kafka.common.metrics.Metrics  [ 672] : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2021-10-13T04:49:51.007+0900  INFO 25694 --- [ntainer#0-2-C-1] org.apache.kafka.common.metrics.Metrics  [ 672] : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2021-10-13T04:49:51.007+0900  INFO 25694 --- [ntainer#0-1-C-1] org.apache.kafka.common.metrics.Metrics  [ 672] : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2021-10-13T04:49:51.008+0900  INFO 25694 --- [ntainer#0-0-C-1] org.apache.kafka.common.metrics.Metrics  [ 678] : Metrics reporters closed
+2021-10-13T04:49:51.008+0900  INFO 25694 --- [ntainer#0-1-C-1] org.apache.kafka.common.metrics.Metrics  [ 678] : Metrics reporters closed
+2021-10-13T04:49:51.008+0900  INFO 25694 --- [ntainer#0-2-C-1] org.apache.kafka.common.metrics.Metrics  [ 678] : Metrics reporters closed
+2021-10-13T04:49:51.017+0900  INFO 25694 --- [ntainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     [  83] : App info kafka.consumer for consumer-group_json-1 unregistered
+2021-10-13T04:49:51.018+0900  INFO 25694 --- [ntainer#0-2-C-1] o.a.kafka.common.utils.AppInfoParser     [  83] : App info kafka.consumer for consumer-group_json-3 unregistered
+2021-10-13T04:49:51.018+0900  INFO 25694 --- [ntainer#0-2-C-1] essageListenerContainer$ListenerConsumer [ 292] : group_json: Consumer stopped
+2021-10-13T04:49:51.018+0900  INFO 25694 --- [ntainer#0-0-C-1] essageListenerContainer$ListenerConsumer [ 292] : group_json: Consumer stopped
+2021-10-13T04:49:51.019+0900  INFO 25694 --- [ntainer#0-1-C-1] o.a.kafka.common.utils.AppInfoParser     [  83] : App info kafka.consumer for consumer-group_json-2 unregistered
+2021-10-13T04:49:51.019+0900  INFO 25694 --- [ntainer#0-1-C-1] essageListenerContainer$ListenerConsumer [ 292] : group_json: Consumer stopped
+2021-10-13T04:49:51.021+0900  INFO 25694 --- [ionShutdownHook] o.s.i.endpoint.EventDrivenConsumer       [ 174] : Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2021-10-13T04:49:51.022+0900  INFO 25694 --- [ionShutdownHook] o.s.i.channel.PublishSubscribeChannel    [ 174] : Channel 'consumer.errorChannel' has 0 subscriber(s).
+2021-10-13T04:49:51.022+0900  INFO 25694 --- [ionShutdownHook] o.s.i.endpoint.EventDrivenConsumer       [ 292] : stopped bean '_org.springframework.integration.errorLogger'
+2021-10-13T04:49:51.303+0900  INFO 25694 --- [ionShutdownHook] com.netflix.discovery.DiscoveryClient    [ 935] : Shutting down DiscoveryClient ...
+2021-10-13T04:49:54.337+0900  INFO 25694 --- [ionShutdownHook] com.netflix.discovery.DiscoveryClient    [ 971] : Unregistering ...
+2021-10-13T04:49:54.398+0900  INFO 25694 --- [ionShutdownHook] com.netflix.discovery.DiscoveryClient    [ 973] : DiscoveryClient_CONSUMER/172.30.1.35:consumer:5020 - deregister  status: 200
+2021-10-13T04:49:54.424+0900  INFO 25694 --- [ionShutdownHook] com.netflix.discovery.DiscoveryClient    [ 960] : Completed shut down of DiscoveryClient
+2021-10-13T04:53:17.682+0900  INFO 27280 --- [  restartedMain] com.bithumb.ConsumerApplication          [  55] : Starting ConsumerApplication using Java 11.0.12 on jonghyeokui-MacBookAir.local with PID 27280 (/Users/jonghyeokjeon/bithumb/youngcha/backend-consumer-service/build/classes/java/main started by jonghyeokjeon in /Users/jonghyeokjeon/bithumb/youngcha/backend-consumer-service)
+2021-10-13T04:53:17.686+0900  INFO 27280 --- [  restartedMain] com.bithumb.ConsumerApplication          [ 663] : The following profiles are active: dev
+2021-10-13T04:53:17.740+0900  INFO 27280 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor [ 255] : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-10-13T04:53:17.742+0900  INFO 27280 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor [ 255] : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-10-13T04:53:19.594+0900  INFO 27280 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate [ 262] : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-10-13T04:53:19.597+0900  INFO 27280 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate [ 132] : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-10-13T04:53:19.626+0900  INFO 27280 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate [ 201] : Finished Spring Data repository scanning in 19 ms. Found 0 Redis repository interfaces.
+2021-10-13T04:53:19.997+0900  WARN 27280 --- [  restartedMain] i.InstanceMetadataServiceResourceFetcher [ 105] : Fail to retrieve token 
+
+com.amazonaws.SdkClientException: Failed to connect to service endpoint: 
+	at com.amazonaws.internal.EC2ResourceFetcher.doReadResource(EC2ResourceFetcher.java:100)
+	at com.amazonaws.internal.InstanceMetadataServiceResourceFetcher.getToken(InstanceMetadataServiceResourceFetcher.java:91)
+	at com.amazonaws.internal.InstanceMetadataServiceResourceFetcher.readResource(InstanceMetadataServiceResourceFetcher.java:69)
+	at com.amazonaws.internal.EC2ResourceFetcher.readResource(EC2ResourceFetcher.java:66)
+	at com.amazonaws.util.EC2MetadataUtils.getItems(EC2MetadataUtils.java:402)
+	at com.amazonaws.util.EC2MetadataUtils.getData(EC2MetadataUtils.java:371)
+	at org.springframework.cloud.aws.context.support.env.AwsCloudEnvironmentCheckUtils.isRunningOnCloudEnvironment(AwsCloudEnvironmentCheckUtils.java:38)
+	at org.springframework.cloud.aws.context.annotation.OnAwsCloudEnvironmentCondition.matches(OnAwsCloudEnvironmentCondition.java:38)
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader$TrackedConditionEvaluator.shouldSkip(ConfigurationClassBeanDefinitionReader.java:489)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:140)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:129)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:343)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.bithumb.ConsumerApplication.main(ConsumerApplication.java:14)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.net.ConnectException: No route to host (connect failed)
+	at java.base/java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
+	at java.base/java.net.Socket.connect(Socket.java:608)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:177)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:474)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:569)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:341)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:362)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1253)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1232)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1081)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1015)
+	at com.amazonaws.internal.ConnectionUtils.connectToEndpoint(ConnectionUtils.java:52)
+	at com.amazonaws.internal.EC2ResourceFetcher.doReadResource(EC2ResourceFetcher.java:80)
+	... 29 common frames omitted
+
+2021-10-13T04:53:20.000+0900  WARN 27280 --- [  restartedMain] com.amazonaws.util.EC2MetadataUtils      [ 409] : Unable to retrieve the requested metadata (/latest/meta-data/instance-id). Failed to connect to service endpoint: 
+
+com.amazonaws.SdkClientException: Failed to connect to service endpoint: 
+	at com.amazonaws.internal.EC2ResourceFetcher.doReadResource(EC2ResourceFetcher.java:100)
+	at com.amazonaws.internal.InstanceMetadataServiceResourceFetcher.getToken(InstanceMetadataServiceResourceFetcher.java:91)
+	at com.amazonaws.internal.InstanceMetadataServiceResourceFetcher.readResource(InstanceMetadataServiceResourceFetcher.java:69)
+	at com.amazonaws.internal.EC2ResourceFetcher.readResource(EC2ResourceFetcher.java:66)
+	at com.amazonaws.util.EC2MetadataUtils.getItems(EC2MetadataUtils.java:402)
+	at com.amazonaws.util.EC2MetadataUtils.getData(EC2MetadataUtils.java:371)
+	at org.springframework.cloud.aws.context.support.env.AwsCloudEnvironmentCheckUtils.isRunningOnCloudEnvironment(AwsCloudEnvironmentCheckUtils.java:38)
+	at org.springframework.cloud.aws.context.annotation.OnAwsCloudEnvironmentCondition.matches(OnAwsCloudEnvironmentCondition.java:38)
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader$TrackedConditionEvaluator.shouldSkip(ConfigurationClassBeanDefinitionReader.java:489)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:140)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:129)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:343)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.bithumb.ConsumerApplication.main(ConsumerApplication.java:14)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.net.ConnectException: No route to host (connect failed)
+	at java.base/java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
+	at java.base/java.net.Socket.connect(Socket.java:608)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:177)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:474)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:569)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:341)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:362)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1253)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1232)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1081)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1015)
+	at com.amazonaws.internal.ConnectionUtils.connectToEndpoint(ConnectionUtils.java:52)
+	at com.amazonaws.internal.EC2ResourceFetcher.doReadResource(EC2ResourceFetcher.java:80)
+	... 29 common frames omitted
+
+2021-10-13T04:53:20.412+0900  INFO 27280 --- [  restartedMain] o.s.cloud.context.scope.GenericScope     [ 283] : BeanFactory id=eaf4a63a-e540-3f2c-ba58-9ff10a71976d
+2021-10-13T04:53:20.460+0900  INFO 27280 --- [  restartedMain] faultConfiguringBeanFactoryPostProcessor [ 292] : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2021-10-13T04:53:20.471+0900  INFO 27280 --- [  restartedMain] faultConfiguringBeanFactoryPostProcessor [ 292] : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2021-10-13T04:53:20.513+0900  INFO 27280 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker [ 376] : Bean '(inner bean)#9d68d1f' of type [com.amazonaws.auth.BasicAWSCredentials] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-13T04:53:20.515+0900  INFO 27280 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker [ 376] : Bean '(inner bean)#4809292a' of type [com.amazonaws.auth.AWSStaticCredentialsProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-13T04:53:20.522+0900  INFO 27280 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker [ 376] : Bean '(inner bean)#66b2619c' of type [com.amazonaws.auth.profile.ProfileCredentialsProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-13T04:53:20.532+0900  INFO 27280 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker [ 376] : Bean 'credentialsProvider' of type [org.springframework.cloud.aws.core.credentials.CredentialsProviderFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-13T04:53:20.533+0900  INFO 27280 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker [ 376] : Bean 'credentialsProvider' of type [com.amazonaws.auth.AWSCredentialsProviderChain] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-13T04:53:20.575+0900  INFO 27280 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker [ 376] : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-13T04:53:20.587+0900  INFO 27280 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker [ 376] : Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-13T04:53:20.591+0900  INFO 27280 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker [ 376] : Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-13T04:53:20.620+0900  INFO 27280 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker [ 376] : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-13T04:53:20.627+0900  INFO 27280 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker [ 376] : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-13T04:53:20.634+0900  INFO 27280 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker [ 376] : Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-13T04:53:21.271+0900  INFO 27280 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  [ 108] : Tomcat initialized with port(s): 5020 (http)
+2021-10-13T04:53:21.279+0900  INFO 27280 --- [  restartedMain] o.apache.catalina.core.StandardService   [ 173] : Starting service [Tomcat]
+2021-10-13T04:53:21.279+0900  INFO 27280 --- [  restartedMain] org.apache.catalina.core.StandardEngine  [ 173] : Starting Servlet engine: [Apache Tomcat/9.0.52]
+2021-10-13T04:53:21.388+0900  INFO 27280 --- [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       [ 173] : Initializing Spring embedded WebApplicationContext
+2021-10-13T04:53:21.388+0900  INFO 27280 --- [  restartedMain] w.s.c.ServletWebServerApplicationContext [ 290] : Root WebApplicationContext: initialization completed in 3643 ms
+2021-10-13T04:53:22.983+0900  INFO 27280 --- [  restartedMain] o.s.b.a.e.web.EndpointLinksResolver      [  58] : Exposing 1 endpoint(s) beneath base path '/actuator'
+2021-10-13T04:53:23.253+0900  INFO 27280 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       [  58] : LiveReload server is running on port 35729
+2021-10-13T04:53:23.276+0900  INFO 27280 --- [  restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    [  53] : Adding welcome page: class path resource [static/index.html]
+2021-10-13T04:53:25.089+0900  INFO 27280 --- [  restartedMain] DiscoveryClientOptionalArgsConfiguration [  68] : Eureka HTTP Client uses RestTemplate.
+2021-10-13T04:53:25.179+0900  WARN 27280 --- [  restartedMain] iguration$LoadBalancerCaffeineWarnLogger [  82] : Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2021-10-13T04:53:25.414+0900  INFO 27280 --- [  restartedMain] o.s.i.endpoint.EventDrivenConsumer       [ 174] : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2021-10-13T04:53:25.415+0900  INFO 27280 --- [  restartedMain] o.s.i.channel.PublishSubscribeChannel    [ 174] : Channel 'consumer.errorChannel' has 1 subscriber(s).
+2021-10-13T04:53:25.415+0900  INFO 27280 --- [  restartedMain] o.s.i.endpoint.EventDrivenConsumer       [ 292] : started bean '_org.springframework.integration.errorLogger'
+2021-10-13T04:53:25.431+0900  INFO 27280 --- [  restartedMain] o.s.c.n.eureka.InstanceInfoFactory       [  67] : Setting initial instance status as: STARTING
+2021-10-13T04:53:25.484+0900  INFO 27280 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    [ 372] : Initializing Eureka in region us-east-1
+2021-10-13T04:53:25.491+0900  INFO 27280 --- [  restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      [  43] : Resolving eureka endpoints via configuration
+2021-10-13T04:53:25.512+0900  INFO 27280 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    [1007] : Disable delta property : false
+2021-10-13T04:53:25.513+0900  INFO 27280 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    [1008] : Single vip registry refresh property : null
+2021-10-13T04:53:25.514+0900  INFO 27280 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    [1009] : Force full registry fetch : false
+2021-10-13T04:53:25.514+0900  INFO 27280 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    [1010] : Application is null : false
+2021-10-13T04:53:25.514+0900  INFO 27280 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    [1011] : Registered Applications size is zero : true
+2021-10-13T04:53:25.514+0900  INFO 27280 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    [1013] : Application version is -1: true
+2021-10-13T04:53:25.514+0900  INFO 27280 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    [1097] : Getting all instance registry info from the eureka server
+2021-10-13T04:53:25.664+0900  INFO 27280 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    [1106] : The response status is 200
+2021-10-13T04:53:25.668+0900  INFO 27280 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    [1321] : Starting heartbeat executor: renew interval is: 30
+2021-10-13T04:53:25.673+0900  INFO 27280 --- [  restartedMain] c.n.discovery.InstanceInfoReplicator     [  60] : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2021-10-13T04:53:25.676+0900  INFO 27280 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    [ 492] : Discovery Client initialized at timestamp 1634068405676 with initial instances count: 9
+2021-10-13T04:53:25.680+0900  INFO 27280 --- [  restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        [  41] : Registering application CONSUMER with eureka with status UP
+2021-10-13T04:53:25.681+0900  INFO 27280 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    [1352] : Saw local status change event StatusChangeEvent [timestamp=1634068405681, current=UP, previous=STARTING]
+2021-10-13T04:53:25.684+0900  INFO 27280 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    [ 873] : DiscoveryClient_CONSUMER/172.30.1.35:consumer:5020: registering service...
+2021-10-13T04:53:25.741+0900  INFO 27280 --- [  restartedMain] o.a.k.clients.consumer.ConsumerConfig    [ 361] : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [3.36.162.130:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-consumer-group-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = consumer-group
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	socket.connection.setup.timeout.max.ms = 127000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2021-10-13T04:53:25.775+0900  INFO 27280 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    [ 882] : DiscoveryClient_CONSUMER/172.30.1.35:consumer:5020 - registration status: 204
+2021-10-13T04:53:25.787+0900  INFO 27280 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     [ 119] : Kafka version: 2.7.1
+2021-10-13T04:53:25.788+0900  INFO 27280 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     [ 120] : Kafka commitId: 61dbce85d0d41457
+2021-10-13T04:53:25.788+0900  INFO 27280 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     [ 121] : Kafka startTimeMs: 1634068405786
+2021-10-13T04:53:25.791+0900  INFO 27280 --- [  restartedMain] o.a.k.clients.consumer.KafkaConsumer     [ 961] : [Consumer clientId=consumer-consumer-group-1, groupId=consumer-group] Subscribed to topic(s): youngcha-coin-quote
+2021-10-13T04:53:25.799+0900  INFO 27280 --- [  restartedMain] o.a.k.clients.consumer.ConsumerConfig    [ 361] : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [3.36.162.130:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-consumer-group-2
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = consumer-group
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	socket.connection.setup.timeout.max.ms = 127000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2021-10-13T04:53:25.808+0900  INFO 27280 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     [ 119] : Kafka version: 2.7.1
+2021-10-13T04:53:25.810+0900  INFO 27280 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     [ 120] : Kafka commitId: 61dbce85d0d41457
+2021-10-13T04:53:25.810+0900  INFO 27280 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     [ 121] : Kafka startTimeMs: 1634068405808
+2021-10-13T04:53:25.812+0900  INFO 27280 --- [  restartedMain] o.a.k.clients.consumer.KafkaConsumer     [ 961] : [Consumer clientId=consumer-consumer-group-2, groupId=consumer-group] Subscribed to topic(s): youngcha-coin-quote
+2021-10-13T04:53:25.819+0900  INFO 27280 --- [  restartedMain] o.a.k.clients.consumer.ConsumerConfig    [ 361] : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [3.36.162.130:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-consumer-group-3
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = consumer-group
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	socket.connection.setup.timeout.max.ms = 127000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2021-10-13T04:53:25.830+0900  INFO 27280 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     [ 119] : Kafka version: 2.7.1
+2021-10-13T04:53:25.832+0900  INFO 27280 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     [ 120] : Kafka commitId: 61dbce85d0d41457
+2021-10-13T04:53:25.832+0900  INFO 27280 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     [ 121] : Kafka startTimeMs: 1634068405830
+2021-10-13T04:53:25.835+0900  INFO 27280 --- [  restartedMain] o.a.k.clients.consumer.KafkaConsumer     [ 961] : [Consumer clientId=consumer-consumer-group-3, groupId=consumer-group] Subscribed to topic(s): youngcha-coin-quote
+2021-10-13T04:53:25.861+0900  INFO 27280 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  [ 220] : Tomcat started on port(s): 5020 (http) with context path ''
+2021-10-13T04:53:25.863+0900  INFO 27280 --- [  restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration [ 144] : Updating port to 5020
+2021-10-13T04:53:26.052+0900  INFO 27280 --- [ntainer#0-1-C-1] org.apache.kafka.clients.Metadata        [ 279] : [Consumer clientId=consumer-consumer-group-2, groupId=consumer-group] Cluster ID: AYzsL0fZSuuLKFVSGcjb1w
+2021-10-13T04:53:26.053+0900  INFO 27280 --- [ntainer#0-0-C-1] org.apache.kafka.clients.Metadata        [ 279] : [Consumer clientId=consumer-consumer-group-1, groupId=consumer-group] Cluster ID: AYzsL0fZSuuLKFVSGcjb1w
+2021-10-13T04:53:26.052+0900  INFO 27280 --- [ntainer#0-2-C-1] org.apache.kafka.clients.Metadata        [ 279] : [Consumer clientId=consumer-consumer-group-3, groupId=consumer-group] Cluster ID: AYzsL0fZSuuLKFVSGcjb1w
+2021-10-13T04:53:26.061+0900  INFO 27280 --- [ntainer#0-1-C-1] o.a.k.c.c.internals.AbstractCoordinator  [ 844] : [Consumer clientId=consumer-consumer-group-2, groupId=consumer-group] Discovered group coordinator broker-1:9092 (id: 2147483646 rack: null)
+2021-10-13T04:53:26.062+0900  INFO 27280 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  [ 844] : [Consumer clientId=consumer-consumer-group-1, groupId=consumer-group] Discovered group coordinator broker-1:9092 (id: 2147483646 rack: null)
+2021-10-13T04:53:26.061+0900  INFO 27280 --- [ntainer#0-2-C-1] o.a.k.c.c.internals.AbstractCoordinator  [ 844] : [Consumer clientId=consumer-consumer-group-3, groupId=consumer-group] Discovered group coordinator broker-1:9092 (id: 2147483646 rack: null)
+2021-10-13T04:53:26.096+0900  INFO 27280 --- [ntainer#0-2-C-1] o.a.k.c.c.internals.AbstractCoordinator  [ 538] : [Consumer clientId=consumer-consumer-group-3, groupId=consumer-group] (Re-)joining group
+2021-10-13T04:53:26.095+0900  INFO 27280 --- [ntainer#0-1-C-1] o.a.k.c.c.internals.AbstractCoordinator  [ 538] : [Consumer clientId=consumer-consumer-group-2, groupId=consumer-group] (Re-)joining group
+2021-10-13T04:53:26.095+0900  INFO 27280 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  [ 538] : [Consumer clientId=consumer-consumer-group-1, groupId=consumer-group] (Re-)joining group
+2021-10-13T04:53:26.147+0900  INFO 27280 --- [ntainer#0-2-C-1] o.a.k.c.c.internals.AbstractCoordinator  [ 538] : [Consumer clientId=consumer-consumer-group-3, groupId=consumer-group] (Re-)joining group
+2021-10-13T04:53:26.147+0900  INFO 27280 --- [ntainer#0-1-C-1] o.a.k.c.c.internals.AbstractCoordinator  [ 538] : [Consumer clientId=consumer-consumer-group-2, groupId=consumer-group] (Re-)joining group
+2021-10-13T04:53:26.147+0900  INFO 27280 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  [ 538] : [Consumer clientId=consumer-consumer-group-1, groupId=consumer-group] (Re-)joining group
+2021-10-13T04:53:26.162+0900  INFO 27280 --- [ntainer#0-2-C-1] o.a.k.c.c.internals.AbstractCoordinator  [ 594] : [Consumer clientId=consumer-consumer-group-3, groupId=consumer-group] Successfully joined group with generation Generation{generationId=1, memberId='consumer-consumer-group-3-ec46a6a0-4c71-468d-b845-1fc208cff248', protocol='range'}
+2021-10-13T04:53:26.162+0900  INFO 27280 --- [ntainer#0-1-C-1] o.a.k.c.c.internals.AbstractCoordinator  [ 594] : [Consumer clientId=consumer-consumer-group-2, groupId=consumer-group] Successfully joined group with generation Generation{generationId=1, memberId='consumer-consumer-group-2-9ff8d010-ce0d-4a29-826e-b04cfa34d7de', protocol='range'}
+2021-10-13T04:53:26.162+0900  INFO 27280 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  [ 594] : [Consumer clientId=consumer-consumer-group-1, groupId=consumer-group] Successfully joined group with generation Generation{generationId=1, memberId='consumer-consumer-group-1-13a8425f-267c-4c5c-8381-65236ad4ef49', protocol='range'}
+2021-10-13T04:53:26.166+0900  INFO 27280 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  [ 626] : [Consumer clientId=consumer-consumer-group-1, groupId=consumer-group] Finished assignment for group at generation 1: {consumer-consumer-group-3-ec46a6a0-4c71-468d-b845-1fc208cff248=Assignment(partitions=[youngcha-coin-quote-2]), consumer-consumer-group-2-9ff8d010-ce0d-4a29-826e-b04cfa34d7de=Assignment(partitions=[youngcha-coin-quote-1]), consumer-consumer-group-1-13a8425f-267c-4c5c-8381-65236ad4ef49=Assignment(partitions=[youngcha-coin-quote-0])}
+2021-10-13T04:53:26.189+0900  INFO 27280 --- [ntainer#0-2-C-1] o.a.k.c.c.internals.AbstractCoordinator  [ 754] : [Consumer clientId=consumer-consumer-group-3, groupId=consumer-group] Successfully synced group in generation Generation{generationId=1, memberId='consumer-consumer-group-3-ec46a6a0-4c71-468d-b845-1fc208cff248', protocol='range'}
+2021-10-13T04:53:26.189+0900  INFO 27280 --- [ntainer#0-1-C-1] o.a.k.c.c.internals.AbstractCoordinator  [ 754] : [Consumer clientId=consumer-consumer-group-2, groupId=consumer-group] Successfully synced group in generation Generation{generationId=1, memberId='consumer-consumer-group-2-9ff8d010-ce0d-4a29-826e-b04cfa34d7de', protocol='range'}
+2021-10-13T04:53:26.189+0900  INFO 27280 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  [ 754] : [Consumer clientId=consumer-consumer-group-1, groupId=consumer-group] Successfully synced group in generation Generation{generationId=1, memberId='consumer-consumer-group-1-13a8425f-267c-4c5c-8381-65236ad4ef49', protocol='range'}
+2021-10-13T04:53:26.191+0900  INFO 27280 --- [ntainer#0-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  [ 276] : [Consumer clientId=consumer-consumer-group-3, groupId=consumer-group] Notifying assignor about the new Assignment(partitions=[youngcha-coin-quote-2])
+2021-10-13T04:53:26.191+0900  INFO 27280 --- [ntainer#0-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  [ 276] : [Consumer clientId=consumer-consumer-group-2, groupId=consumer-group] Notifying assignor about the new Assignment(partitions=[youngcha-coin-quote-1])
+2021-10-13T04:53:26.191+0900  INFO 27280 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  [ 276] : [Consumer clientId=consumer-consumer-group-1, groupId=consumer-group] Notifying assignor about the new Assignment(partitions=[youngcha-coin-quote-0])
+2021-10-13T04:53:26.194+0900  INFO 27280 --- [ntainer#0-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  [ 288] : [Consumer clientId=consumer-consumer-group-2, groupId=consumer-group] Adding newly assigned partitions: youngcha-coin-quote-1
+2021-10-13T04:53:26.194+0900  INFO 27280 --- [ntainer#0-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  [ 288] : [Consumer clientId=consumer-consumer-group-3, groupId=consumer-group] Adding newly assigned partitions: youngcha-coin-quote-2
+2021-10-13T04:53:26.194+0900  INFO 27280 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  [ 288] : [Consumer clientId=consumer-consumer-group-1, groupId=consumer-group] Adding newly assigned partitions: youngcha-coin-quote-0
+2021-10-13T04:53:26.203+0900  INFO 27280 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  [1354] : [Consumer clientId=consumer-consumer-group-1, groupId=consumer-group] Found no committed offset for partition youngcha-coin-quote-0
+2021-10-13T04:53:26.203+0900  INFO 27280 --- [ntainer#0-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  [1354] : [Consumer clientId=consumer-consumer-group-2, groupId=consumer-group] Found no committed offset for partition youngcha-coin-quote-1
+2021-10-13T04:53:26.203+0900  INFO 27280 --- [ntainer#0-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  [1354] : [Consumer clientId=consumer-consumer-group-3, groupId=consumer-group] Found no committed offset for partition youngcha-coin-quote-2
+2021-10-13T04:53:26.224+0900  INFO 27280 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  [1354] : [Consumer clientId=consumer-consumer-group-1, groupId=consumer-group] Found no committed offset for partition youngcha-coin-quote-0
+2021-10-13T04:53:26.224+0900  INFO 27280 --- [ntainer#0-2-C-1] o.a.k.c.c.internals.ConsumerCoordinator  [1354] : [Consumer clientId=consumer-consumer-group-3, groupId=consumer-group] Found no committed offset for partition youngcha-coin-quote-2
+2021-10-13T04:53:26.224+0900  INFO 27280 --- [ntainer#0-1-C-1] o.a.k.c.c.internals.ConsumerCoordinator  [1354] : [Consumer clientId=consumer-consumer-group-2, groupId=consumer-group] Found no committed offset for partition youngcha-coin-quote-1
+2021-10-13T04:53:26.259+0900  INFO 27280 --- [ntainer#0-1-C-1] o.a.k.c.c.internals.SubscriptionState    [ 396] : [Consumer clientId=consumer-consumer-group-2, groupId=consumer-group] Resetting offset for partition youngcha-coin-quote-1 to position FetchPosition{offset=335772, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[broker-1:9092 (id: 1 rack: null)], epoch=0}}.
+2021-10-13T04:53:26.259+0900  INFO 27280 --- [ntainer#0-2-C-1] o.a.k.c.c.internals.SubscriptionState    [ 396] : [Consumer clientId=consumer-consumer-group-3, groupId=consumer-group] Resetting offset for partition youngcha-coin-quote-2 to position FetchPosition{offset=335075, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[broker-2:9092 (id: 2 rack: null)], epoch=0}}.
+2021-10-13T04:53:26.259+0900  INFO 27280 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.SubscriptionState    [ 396] : [Consumer clientId=consumer-consumer-group-1, groupId=consumer-group] Resetting offset for partition youngcha-coin-quote-0 to position FetchPosition{offset=5691151, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[broker-3:9092 (id: 3 rack: null)], epoch=0}}.
+2021-10-13T04:53:26.261+0900  INFO 27280 --- [  restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     [ 137] : Starting...
+2021-10-13T04:53:26.261+0900  INFO 27280 --- [  restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     [ 137] : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@4424e9a7]]
+2021-10-13T04:53:26.263+0900  INFO 27280 --- [  restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     [ 137] : Started.
+2021-10-13T04:53:26.269+0900  INFO 27280 --- [ntainer#0-2-C-1] o.s.k.l.KafkaMessageListenerContainer    [ 292] : consumer-group: partitions assigned: [youngcha-coin-quote-2]
+2021-10-13T04:53:26.270+0900  INFO 27280 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    [ 292] : consumer-group: partitions assigned: [youngcha-coin-quote-0]
+2021-10-13T04:53:26.271+0900  INFO 27280 --- [ntainer#0-1-C-1] o.s.k.l.KafkaMessageListenerContainer    [ 292] : consumer-group: partitions assigned: [youngcha-coin-quote-1]
+2021-10-13T04:53:26.324+0900  INFO 27280 --- [  restartedMain] com.bithumb.ConsumerApplication          [  61] : Started ConsumerApplication in 9.37 seconds (JVM running for 15.735)
+2021-10-13T04:53:26.350+0900  WARN 27280 --- [led-task-pool-1] c.a.http.apache.utils.ApacheUtils        [ 246] : NoSuchMethodException was thrown when disabling normalizeUri. This indicates you are using an old version (< 4.5.8) of Apache http client. It is recommended to use http client version >= 4.5.9 to avoid the breaking change introduced in apache client 4.5.7 and the latency in exception handling. See https://github.com/aws/aws-sdk-java/issues/1919 for more information
+2021-10-13T04:53:26.892+0900  INFO 27280 --- [(4)-172.30.1.35] o.a.c.c.C.[Tomcat].[localhost].[/]       [ 173] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-13T04:53:26.893+0900  INFO 27280 --- [(4)-172.30.1.35] o.s.web.servlet.DispatcherServlet        [ 525] : Initializing Servlet 'dispatcherServlet'
+2021-10-13T04:53:26.896+0900  INFO 27280 --- [(4)-172.30.1.35] o.s.web.servlet.DispatcherServlet        [ 547] : Completed initialization in 3 ms
+2021-10-13T04:53:26.924+0900 ERROR 27280 --- [led-task-pool-4] o.s.s.s.TaskUtils$LoggingErrorHandler    [  95] : Unexpected error occurred in scheduled task
+
+com.amazonaws.services.s3.model.AmazonS3Exception: The AWS Access Key Id you provided does not exist in our records. (Service: Amazon S3; Status Code: 403; Error Code: InvalidAccessKeyId; Request ID: Q3W1KAGFWNKB7J6P; S3 Extended Request ID: 3M19LmOnFzjhAenYl/ZpiY/L3MApzVDj0VRBPOrSjr+fjmnrHl6+5zp1r3Ma8mMaw0CaPZWfXqQ=; Proxy: null)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.handleErrorResponse(AmazonHttpClient.java:1811)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.handleServiceErrorResponse(AmazonHttpClient.java:1395)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.executeOneRequest(AmazonHttpClient.java:1371)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.executeHelper(AmazonHttpClient.java:1145)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.doExecute(AmazonHttpClient.java:802)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.executeWithTimer(AmazonHttpClient.java:770)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.execute(AmazonHttpClient.java:744)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.access$500(AmazonHttpClient.java:704)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutionBuilderImpl.execute(AmazonHttpClient.java:686)
+	at com.amazonaws.http.AmazonHttpClient.execute(AmazonHttpClient.java:550)
+	at com.amazonaws.http.AmazonHttpClient.execute(AmazonHttpClient.java:530)
+	at com.amazonaws.services.s3.AmazonS3Client.invoke(AmazonS3Client.java:5062)
+	at com.amazonaws.services.s3.AmazonS3Client.invoke(AmazonS3Client.java:5008)
+	at com.amazonaws.services.s3.AmazonS3Client.getObject(AmazonS3Client.java:1490)
+	at com.amazonaws.services.s3.AmazonS3Client.getObject(AmazonS3Client.java:1344)
+	at com.bithumb.utils.service.CoinServiceImpl.getCoins(CoinServiceImpl.java:41)
+	at com.bithumb.candlestick.service.Scheduler.schedule10MTask(Scheduler.java:127)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+2021-10-13T04:53:26.924+0900 ERROR 27280 --- [led-task-pool-2] o.s.s.s.TaskUtils$LoggingErrorHandler    [  95] : Unexpected error occurred in scheduled task
+
+com.amazonaws.services.s3.model.AmazonS3Exception: The AWS Access Key Id you provided does not exist in our records. (Service: Amazon S3; Status Code: 403; Error Code: InvalidAccessKeyId; Request ID: Q3W00ZDY7MBHF5KB; S3 Extended Request ID: /JGL23aDxPEm7YWuTZFAtkhTEOTsZkABIsrXkwQfEaZd7B9mCCKUAVCcFjihdkHi3XlnzTEbnzY=; Proxy: null)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.handleErrorResponse(AmazonHttpClient.java:1811)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.handleServiceErrorResponse(AmazonHttpClient.java:1395)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.executeOneRequest(AmazonHttpClient.java:1371)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.executeHelper(AmazonHttpClient.java:1145)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.doExecute(AmazonHttpClient.java:802)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.executeWithTimer(AmazonHttpClient.java:770)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.execute(AmazonHttpClient.java:744)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.access$500(AmazonHttpClient.java:704)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutionBuilderImpl.execute(AmazonHttpClient.java:686)
+	at com.amazonaws.http.AmazonHttpClient.execute(AmazonHttpClient.java:550)
+	at com.amazonaws.http.AmazonHttpClient.execute(AmazonHttpClient.java:530)
+	at com.amazonaws.services.s3.AmazonS3Client.invoke(AmazonS3Client.java:5062)
+	at com.amazonaws.services.s3.AmazonS3Client.invoke(AmazonS3Client.java:5008)
+	at com.amazonaws.services.s3.AmazonS3Client.getObject(AmazonS3Client.java:1490)
+	at com.amazonaws.services.s3.AmazonS3Client.getObject(AmazonS3Client.java:1344)
+	at com.bithumb.utils.service.CoinServiceImpl.getCoins(CoinServiceImpl.java:41)
+	at com.bithumb.candlestick.service.Scheduler.schedule1HTask(Scheduler.java:60)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+2021-10-13T04:53:26.924+0900 ERROR 27280 --- [led-task-pool-1] o.s.s.s.TaskUtils$LoggingErrorHandler    [  95] : Unexpected error occurred in scheduled task
+
+com.amazonaws.services.s3.model.AmazonS3Exception: The AWS Access Key Id you provided does not exist in our records. (Service: Amazon S3; Status Code: 403; Error Code: InvalidAccessKeyId; Request ID: Q3W1NBH79JDAYHE7; S3 Extended Request ID: WIfzAbEMflL7rRRLGnZTB666NVCoCdDUykcGWb0lQ8C2N6x26qkSAVciLL8q8xcQTpgdFdPSOTo=; Proxy: null)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.handleErrorResponse(AmazonHttpClient.java:1811)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.handleServiceErrorResponse(AmazonHttpClient.java:1395)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.executeOneRequest(AmazonHttpClient.java:1371)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.executeHelper(AmazonHttpClient.java:1145)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.doExecute(AmazonHttpClient.java:802)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.executeWithTimer(AmazonHttpClient.java:770)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.execute(AmazonHttpClient.java:744)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.access$500(AmazonHttpClient.java:704)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutionBuilderImpl.execute(AmazonHttpClient.java:686)
+	at com.amazonaws.http.AmazonHttpClient.execute(AmazonHttpClient.java:550)
+	at com.amazonaws.http.AmazonHttpClient.execute(AmazonHttpClient.java:530)
+	at com.amazonaws.services.s3.AmazonS3Client.invoke(AmazonS3Client.java:5062)
+	at com.amazonaws.services.s3.AmazonS3Client.invoke(AmazonS3Client.java:5008)
+	at com.amazonaws.services.s3.AmazonS3Client.getObject(AmazonS3Client.java:1490)
+	at com.amazonaws.services.s3.AmazonS3Client.getObject(AmazonS3Client.java:1344)
+	at com.bithumb.utils.service.CoinServiceImpl.getCoins(CoinServiceImpl.java:41)
+	at com.bithumb.candlestick.service.Scheduler.schedule30MTask(Scheduler.java:93)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+2021-10-13T04:53:26.924+0900 ERROR 27280 --- [led-task-pool-3] o.s.s.s.TaskUtils$LoggingErrorHandler    [  95] : Unexpected error occurred in scheduled task
+
+com.amazonaws.services.s3.model.AmazonS3Exception: The AWS Access Key Id you provided does not exist in our records. (Service: Amazon S3; Status Code: 403; Error Code: InvalidAccessKeyId; Request ID: Q3WCHBS576MA6GM7; S3 Extended Request ID: sMMCB2XwAhdXMKr6u5w5MAO5sNlRXXG0dWajS21KDYe/R/18irF+7aPDjEZVFwTaDSI4UDTIYFY=; Proxy: null)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.handleErrorResponse(AmazonHttpClient.java:1811)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.handleServiceErrorResponse(AmazonHttpClient.java:1395)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.executeOneRequest(AmazonHttpClient.java:1371)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.executeHelper(AmazonHttpClient.java:1145)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.doExecute(AmazonHttpClient.java:802)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.executeWithTimer(AmazonHttpClient.java:770)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.execute(AmazonHttpClient.java:744)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.access$500(AmazonHttpClient.java:704)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutionBuilderImpl.execute(AmazonHttpClient.java:686)
+	at com.amazonaws.http.AmazonHttpClient.execute(AmazonHttpClient.java:550)
+	at com.amazonaws.http.AmazonHttpClient.execute(AmazonHttpClient.java:530)
+	at com.amazonaws.services.s3.AmazonS3Client.invoke(AmazonS3Client.java:5062)
+	at com.amazonaws.services.s3.AmazonS3Client.invoke(AmazonS3Client.java:5008)
+	at com.amazonaws.services.s3.AmazonS3Client.getObject(AmazonS3Client.java:1490)
+	at com.amazonaws.services.s3.AmazonS3Client.getObject(AmazonS3Client.java:1344)
+	at com.bithumb.utils.service.CoinServiceImpl.getCoins(CoinServiceImpl.java:41)
+	at com.bithumb.candlestick.service.Scheduler.schedule24HTask(Scheduler.java:27)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+2021-10-13T04:53:32.420+0900  WARN 27280 --- [oundedElastic-1] o.s.b.a.r.RedisReactiveHealthIndicator   [  89] : Redis health check failed
+
+org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to redis:6379
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.translateException(LettuceConnectionFactory.java:1671)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1579)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1365)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getConnection(LettuceConnectionFactory.java:1348)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getSharedReactiveConnection(LettuceConnectionFactory.java:1099)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getReactiveConnection(LettuceConnectionFactory.java:511)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getReactiveConnection(LettuceConnectionFactory.java:103)
+	at reactor.core.publisher.MonoSupplier.call(MonoSupplier.java:86)
+	at reactor.core.publisher.FluxSubscribeOnCallable$CallableSubscribeOnSubscription.run(FluxSubscribeOnCallable.java:227)
+	at reactor.core.scheduler.SchedulerTask.call(SchedulerTask.java:68)
+	at reactor.core.scheduler.SchedulerTask.call(SchedulerTask.java:28)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: io.lettuce.core.RedisConnectionException: Unable to connect to redis:6379
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:78)
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:56)
+	at io.lettuce.core.AbstractRedisClient.getConnection(AbstractRedisClient.java:330)
+	at io.lettuce.core.RedisClient.connect(RedisClient.java:216)
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.lambda$getConnection$1(StandaloneConnectionProvider.java:115)
+	at java.base/java.util.Optional.orElseGet(Optional.java:369)
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.getConnection(StandaloneConnectionProvider.java:115)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1577)
+	... 14 common frames omitted
+Caused by: java.net.UnknownHostException: failed to resolve 'redis' after 4 queries 
+	at io.netty.resolver.dns.DnsResolveContext.finishResolve(DnsResolveContext.java:1046)
+	at io.netty.resolver.dns.DnsResolveContext.tryToFinishResolve(DnsResolveContext.java:999)
+	at io.netty.resolver.dns.DnsResolveContext.query(DnsResolveContext.java:417)
+	at io.netty.resolver.dns.DnsResolveContext.onResponse(DnsResolveContext.java:628)
+	at io.netty.resolver.dns.DnsResolveContext.access$400(DnsResolveContext.java:65)
+	at io.netty.resolver.dns.DnsResolveContext$2.operationComplete(DnsResolveContext.java:461)
+	at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:578)
+	at io.netty.util.concurrent.DefaultPromise.notifyListeners0(DefaultPromise.java:571)
+	at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:550)
+	at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:491)
+	at io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:616)
+	at io.netty.util.concurrent.DefaultPromise.setSuccess0(DefaultPromise.java:605)
+	at io.netty.util.concurrent.DefaultPromise.trySuccess(DefaultPromise.java:104)
+	at io.netty.resolver.dns.DnsQueryContext.trySuccess(DnsQueryContext.java:201)
+	at io.netty.resolver.dns.DnsQueryContext.finish(DnsQueryContext.java:193)
+	at io.netty.resolver.dns.DnsNameResolver$DnsResponseHandler.channelRead(DnsNameResolver.java:1301)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:103)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.nio.AbstractNioMessageChannel$NioMessageUnsafe.read(AbstractNioMessageChannel.java:97)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 common frames omitted
+
+2021-10-13T04:54:23.112+0900  INFO 27280 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    [ 126] : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]

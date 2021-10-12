@@ -36,3 +36,4 @@ property:
   candlestickuri: https://api.bithumb.com/public/candlestick/
   kafka:
     server: 3.36.162.130:9092
+    group: consumer-group

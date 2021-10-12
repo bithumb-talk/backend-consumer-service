@@ -22,13 +22,15 @@ public class KafkaConsumerConfig {
 
     @Value("${property.kafka.server}")
     private String KAFKA_SERVER;
+    @Value("${property.kafka.group}")
+    private String GROUP;
 
     @Bean
     public ConsumerFactory<String, Quote> coinConsumerFactory() {
         Map<String, Object> config = new HashMap<>();
 
         config.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, KAFKA_SERVER);
-        config.put(ConsumerConfig.GROUP_ID_CONFIG, "group_json");
+        config.put(ConsumerConfig.GROUP_ID_CONFIG, GROUP);
         config.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
         config.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, JsonDeserializer.class);
         config.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, false);
