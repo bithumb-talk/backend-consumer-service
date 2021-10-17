@@ -1,0 +1,1260 @@
+2021-10-11T22:53:34.675+0900  WARN 66080 --- [    Test worker] ory$DuplicateJsonObjectContextCustomizer [  78] : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/usr/local/Cellar/gradle/7.2/caches/modules-2/files-2.1/org.json/json/20171018/36ced462c97f0845b4a7b266a25cebe95d18baa3/json-20171018.jar!/org/json/JSONObject.class
+	jar:file:/usr/local/Cellar/gradle/7.2/caches/modules-2/files-2.1/com.vaadin.external.google/android-json/0.0.20131108.vaadin1/fa26d351fe62a6a17f5cda1287c1c6110dec413f/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2021-10-11T22:53:34.844+0900  INFO 66080 --- [    Test worker] c.b.c.controller.CandleControllerTest    [  55] : Starting CandleControllerTest using Java 11.0.12 on jonghyeokui-MacBookAir.local with PID 66080 (started by jonghyeokjeon in /Users/jonghyeokjeon/bithumb/youngcha/backend-consumer-service)
+2021-10-11T22:53:34.858+0900  INFO 66080 --- [    Test worker] c.b.c.controller.CandleControllerTest    [ 663] : The following profiles are active: dev
+2021-10-11T22:53:41.738+0900  INFO 66080 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate [ 262] : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-10-11T22:53:41.753+0900  INFO 66080 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate [ 132] : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-10-11T22:53:41.813+0900  INFO 66080 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate [ 201] : Finished Spring Data repository scanning in 26 ms. Found 0 Redis repository interfaces.
+2021-10-11T22:53:43.778+0900  INFO 66130 --- [  restartedMain] com.bithumb.ConsumerApplication          [  55] : Starting ConsumerApplication using Java 11.0.12 on jonghyeokui-MacBookAir.local with PID 66130 (/Users/jonghyeokjeon/bithumb/youngcha/backend-consumer-service/build/classes/java/main started by jonghyeokjeon in /Users/jonghyeokjeon/bithumb/youngcha/backend-consumer-service)
+2021-10-11T22:53:43.781+0900  INFO 66130 --- [  restartedMain] com.bithumb.ConsumerApplication          [ 663] : The following profiles are active: dev
+2021-10-11T22:53:43.850+0900  INFO 66130 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor [ 255] : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-10-11T22:53:43.851+0900  INFO 66130 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor [ 255] : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-10-11T22:53:45.437+0900  INFO 66130 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate [ 262] : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-10-11T22:53:45.439+0900  INFO 66130 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate [ 132] : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-10-11T22:53:45.460+0900  INFO 66130 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate [ 201] : Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+2021-10-11T22:53:50.018+0900  WARN 66080 --- [    Test worker] com.amazonaws.util.EC2MetadataUtils      [ 409] : Unable to retrieve the requested metadata (/latest/meta-data/instance-id). Failed to connect to service endpoint: 
+
+com.amazonaws.SdkClientException: Failed to connect to service endpoint: 
+	at com.amazonaws.internal.EC2ResourceFetcher.doReadResource(EC2ResourceFetcher.java:100)
+	at com.amazonaws.internal.EC2ResourceFetcher.doReadResource(EC2ResourceFetcher.java:70)
+	at com.amazonaws.internal.InstanceMetadataServiceResourceFetcher.readResource(InstanceMetadataServiceResourceFetcher.java:75)
+	at com.amazonaws.internal.EC2ResourceFetcher.readResource(EC2ResourceFetcher.java:66)
+	at com.amazonaws.util.EC2MetadataUtils.getItems(EC2MetadataUtils.java:402)
+	at com.amazonaws.util.EC2MetadataUtils.getData(EC2MetadataUtils.java:371)
+	at org.springframework.cloud.aws.context.support.env.AwsCloudEnvironmentCheckUtils.isRunningOnCloudEnvironment(AwsCloudEnvironmentCheckUtils.java:38)
+	at org.springframework.cloud.aws.context.annotation.OnAwsCloudEnvironmentCondition.matches(OnAwsCloudEnvironmentCondition.java:38)
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader$TrackedConditionEvaluator.shouldSkip(ConfigurationClassBeanDefinitionReader.java:489)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:140)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:129)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:343)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:123)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:124)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:138)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassBasedTestDescriptor.java:350)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:355)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$7(ClassBasedTestDescriptor.java:350)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:312)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:349)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$4(ClassBasedTestDescriptor.java:270)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:269)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:259)
+	at java.base/java.util.Optional.orElseGet(Optional.java:369)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:258)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:101)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:100)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:65)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:111)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:111)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:79)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:96)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:75)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy2.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.stop(TestWorker.java:135)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:182)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:164)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:414)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:48)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.net.ConnectException: Host is down (connect failed)
+	at java.base/java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
+	at java.base/java.net.Socket.connect(Socket.java:608)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:177)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:474)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:569)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:341)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:362)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1253)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1232)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1081)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1015)
+	at com.amazonaws.internal.ConnectionUtils.connectToEndpoint(ConnectionUtils.java:52)
+	at com.amazonaws.internal.EC2ResourceFetcher.doReadResource(EC2ResourceFetcher.java:80)
+	... 115 common frames omitted
+
+2021-10-11T22:53:50.903+0900  INFO 66080 --- [    Test worker] o.s.cloud.context.scope.GenericScope     [ 283] : BeanFactory id=2752f738-80f2-3f87-b49f-449aa0fecd21
+2021-10-11T22:53:51.102+0900  INFO 66080 --- [    Test worker] faultConfiguringBeanFactoryPostProcessor [ 292] : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2021-10-11T22:53:51.119+0900  INFO 66080 --- [    Test worker] faultConfiguringBeanFactoryPostProcessor [ 292] : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2021-10-11T22:53:51.264+0900  INFO 66080 --- [    Test worker] trationDelegate$BeanPostProcessorChecker [ 376] : Bean '(inner bean)#6cfa513c' of type [com.amazonaws.auth.BasicAWSCredentials] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-11T22:53:51.270+0900  INFO 66080 --- [    Test worker] trationDelegate$BeanPostProcessorChecker [ 376] : Bean '(inner bean)#8779de0' of type [com.amazonaws.auth.AWSStaticCredentialsProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-11T22:53:51.280+0900  WARN 66130 --- [  restartedMain] com.amazonaws.util.EC2MetadataUtils      [ 409] : Unable to retrieve the requested metadata (/latest/meta-data/instance-id). Failed to connect to service endpoint: 
+
+com.amazonaws.SdkClientException: Failed to connect to service endpoint: 
+	at com.amazonaws.internal.EC2ResourceFetcher.doReadResource(EC2ResourceFetcher.java:100)
+	at com.amazonaws.internal.EC2ResourceFetcher.doReadResource(EC2ResourceFetcher.java:70)
+	at com.amazonaws.internal.InstanceMetadataServiceResourceFetcher.readResource(InstanceMetadataServiceResourceFetcher.java:75)
+	at com.amazonaws.internal.EC2ResourceFetcher.readResource(EC2ResourceFetcher.java:66)
+	at com.amazonaws.util.EC2MetadataUtils.getItems(EC2MetadataUtils.java:402)
+	at com.amazonaws.util.EC2MetadataUtils.getData(EC2MetadataUtils.java:371)
+	at org.springframework.cloud.aws.context.support.env.AwsCloudEnvironmentCheckUtils.isRunningOnCloudEnvironment(AwsCloudEnvironmentCheckUtils.java:38)
+	at org.springframework.cloud.aws.context.annotation.OnAwsCloudEnvironmentCondition.matches(OnAwsCloudEnvironmentCondition.java:38)
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader$TrackedConditionEvaluator.shouldSkip(ConfigurationClassBeanDefinitionReader.java:489)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:140)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:129)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:343)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.bithumb.ConsumerApplication.main(ConsumerApplication.java:14)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.net.ConnectException: Host is down (connect failed)
+	at java.base/java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
+	at java.base/java.net.Socket.connect(Socket.java:608)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:177)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:474)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:569)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:341)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:362)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1253)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1232)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1081)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1015)
+	at com.amazonaws.internal.ConnectionUtils.connectToEndpoint(ConnectionUtils.java:52)
+	at com.amazonaws.internal.EC2ResourceFetcher.doReadResource(EC2ResourceFetcher.java:80)
+	... 29 common frames omitted
+
+2021-10-11T22:53:51.292+0900  INFO 66080 --- [    Test worker] trationDelegate$BeanPostProcessorChecker [ 376] : Bean '(inner bean)#2ee387b1' of type [com.amazonaws.auth.profile.ProfileCredentialsProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-11T22:53:51.329+0900  INFO 66080 --- [    Test worker] trationDelegate$BeanPostProcessorChecker [ 376] : Bean 'credentialsProvider' of type [org.springframework.cloud.aws.core.credentials.CredentialsProviderFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-11T22:53:51.331+0900  INFO 66080 --- [    Test worker] trationDelegate$BeanPostProcessorChecker [ 376] : Bean 'credentialsProvider' of type [com.amazonaws.auth.AWSCredentialsProviderChain] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-11T22:53:51.580+0900  INFO 66080 --- [    Test worker] trationDelegate$BeanPostProcessorChecker [ 376] : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-11T22:53:51.702+0900  INFO 66080 --- [    Test worker] trationDelegate$BeanPostProcessorChecker [ 376] : Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-11T22:53:51.716+0900  INFO 66080 --- [    Test worker] trationDelegate$BeanPostProcessorChecker [ 376] : Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-11T22:53:51.861+0900  INFO 66080 --- [    Test worker] trationDelegate$BeanPostProcessorChecker [ 376] : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-11T22:53:51.872+0900  INFO 66080 --- [    Test worker] trationDelegate$BeanPostProcessorChecker [ 376] : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-11T22:53:51.888+0900  INFO 66080 --- [    Test worker] trationDelegate$BeanPostProcessorChecker [ 376] : Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-11T22:53:51.931+0900  INFO 66130 --- [  restartedMain] o.s.cloud.context.scope.GenericScope     [ 283] : BeanFactory id=eaf4a63a-e540-3f2c-ba58-9ff10a71976d
+2021-10-11T22:53:51.985+0900  INFO 66130 --- [  restartedMain] faultConfiguringBeanFactoryPostProcessor [ 292] : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2021-10-11T22:53:51.997+0900  INFO 66130 --- [  restartedMain] faultConfiguringBeanFactoryPostProcessor [ 292] : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2021-10-11T22:53:52.054+0900  INFO 66130 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker [ 376] : Bean '(inner bean)#7a6ee9c5' of type [com.amazonaws.auth.BasicAWSCredentials] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-11T22:53:52.055+0900  INFO 66130 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker [ 376] : Bean '(inner bean)#4aec22e' of type [com.amazonaws.auth.AWSStaticCredentialsProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-11T22:53:52.068+0900  INFO 66130 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker [ 376] : Bean '(inner bean)#747a674f' of type [com.amazonaws.auth.profile.ProfileCredentialsProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-11T22:53:52.075+0900  INFO 66130 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker [ 376] : Bean 'credentialsProvider' of type [org.springframework.cloud.aws.core.credentials.CredentialsProviderFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-11T22:53:52.076+0900  INFO 66130 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker [ 376] : Bean 'credentialsProvider' of type [com.amazonaws.auth.AWSCredentialsProviderChain] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-11T22:53:52.126+0900  INFO 66130 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker [ 376] : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-11T22:53:52.137+0900  INFO 66130 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker [ 376] : Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-11T22:53:52.144+0900  INFO 66130 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker [ 376] : Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-11T22:53:52.200+0900  INFO 66130 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker [ 376] : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-11T22:53:52.204+0900  INFO 66130 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker [ 376] : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-11T22:53:52.213+0900  INFO 66130 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker [ 376] : Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-11T22:53:53.009+0900  INFO 66130 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  [ 108] : Tomcat initialized with port(s): 5020 (http)
+2021-10-11T22:53:53.023+0900  INFO 66130 --- [  restartedMain] o.apache.catalina.core.StandardService   [ 173] : Starting service [Tomcat]
+2021-10-11T22:53:53.023+0900  INFO 66130 --- [  restartedMain] org.apache.catalina.core.StandardEngine  [ 173] : Starting Servlet engine: [Apache Tomcat/9.0.52]
+2021-10-11T22:53:53.188+0900  INFO 66130 --- [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       [ 173] : Initializing Spring embedded WebApplicationContext
+2021-10-11T22:53:53.189+0900  INFO 66130 --- [  restartedMain] w.s.c.ServletWebServerApplicationContext [ 290] : Root WebApplicationContext: initialization completed in 9337 ms
+2021-10-11T22:53:55.089+0900  INFO 66130 --- [  restartedMain] o.s.b.a.e.web.EndpointLinksResolver      [  58] : Exposing 1 endpoint(s) beneath base path '/actuator'
+2021-10-11T22:53:55.491+0900  WARN 66130 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       [  61] : Unable to start LiveReload server
+2021-10-11T22:53:55.516+0900  INFO 66130 --- [  restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    [  53] : Adding welcome page: class path resource [static/index.html]
+2021-10-11T22:53:56.581+0900  INFO 66080 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      [  58] : Exposing 1 endpoint(s) beneath base path '/actuator'
+2021-10-11T22:53:57.916+0900  INFO 66080 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    [  53] : Adding welcome page: class path resource [static/index.html]
+2021-10-11T22:53:57.953+0900  INFO 66130 --- [  restartedMain] DiscoveryClientOptionalArgsConfiguration [  68] : Eureka HTTP Client uses RestTemplate.
+2021-10-11T22:53:58.037+0900  WARN 66130 --- [  restartedMain] iguration$LoadBalancerCaffeineWarnLogger [  82] : Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2021-10-11T22:53:58.418+0900  INFO 66130 --- [  restartedMain] o.s.i.endpoint.EventDrivenConsumer       [ 174] : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2021-10-11T22:53:58.418+0900  INFO 66130 --- [  restartedMain] o.s.i.channel.PublishSubscribeChannel    [ 174] : Channel 'consumer.errorChannel' has 1 subscriber(s).
+2021-10-11T22:53:58.419+0900  INFO 66130 --- [  restartedMain] o.s.i.endpoint.EventDrivenConsumer       [ 292] : started bean '_org.springframework.integration.errorLogger'
+2021-10-11T22:53:58.429+0900  INFO 66130 --- [  restartedMain] o.s.c.n.eureka.InstanceInfoFactory       [  67] : Setting initial instance status as: STARTING
+2021-10-11T22:53:58.466+0900  INFO 66130 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    [ 372] : Initializing Eureka in region us-east-1
+2021-10-11T22:53:58.482+0900  INFO 66130 --- [  restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      [  43] : Resolving eureka endpoints via configuration
+2021-10-11T22:53:58.541+0900  INFO 66130 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    [1007] : Disable delta property : false
+2021-10-11T22:53:58.542+0900  INFO 66130 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    [1008] : Single vip registry refresh property : null
+2021-10-11T22:53:58.542+0900  INFO 66130 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    [1009] : Force full registry fetch : false
+2021-10-11T22:53:58.542+0900  INFO 66130 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    [1010] : Application is null : false
+2021-10-11T22:53:58.542+0900  INFO 66130 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    [1011] : Registered Applications size is zero : true
+2021-10-11T22:53:58.543+0900  INFO 66130 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    [1013] : Application version is -1: true
+2021-10-11T22:53:58.543+0900  INFO 66130 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    [1097] : Getting all instance registry info from the eureka server
+2021-10-11T22:53:58.822+0900  INFO 66130 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    [1106] : The response status is 200
+2021-10-11T22:53:58.826+0900  INFO 66130 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    [1321] : Starting heartbeat executor: renew interval is: 30
+2021-10-11T22:53:58.829+0900  INFO 66130 --- [  restartedMain] c.n.discovery.InstanceInfoReplicator     [  60] : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2021-10-11T22:53:58.836+0900  INFO 66130 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    [ 492] : Discovery Client initialized at timestamp 1633960438835 with initial instances count: 10
+2021-10-11T22:53:58.840+0900  INFO 66130 --- [  restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        [  41] : Registering application CONSUMER with eureka with status UP
+2021-10-11T22:53:58.840+0900  INFO 66130 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    [1352] : Saw local status change event StatusChangeEvent [timestamp=1633960438840, current=UP, previous=STARTING]
+2021-10-11T22:53:58.845+0900  INFO 66130 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    [ 873] : DiscoveryClient_CONSUMER/172.30.1.35:consumer:5020: registering service...
+2021-10-11T22:53:58.926+0900  INFO 66130 --- [  restartedMain] o.a.k.clients.consumer.ConsumerConfig    [ 361] : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [3.36.162.130:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-group_json-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = group_json
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	socket.connection.setup.timeout.max.ms = 127000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2021-10-11T22:53:59.043+0900  INFO 66130 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    [ 882] : DiscoveryClient_CONSUMER/172.30.1.35:consumer:5020 - registration status: 204
+2021-10-11T22:53:59.088+0900  INFO 66130 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     [ 119] : Kafka version: 2.7.1
+2021-10-11T22:53:59.088+0900  INFO 66130 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     [ 120] : Kafka commitId: 61dbce85d0d41457
+2021-10-11T22:53:59.089+0900  INFO 66130 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     [ 121] : Kafka startTimeMs: 1633960439085
+2021-10-11T22:53:59.096+0900  INFO 66130 --- [  restartedMain] o.a.k.clients.consumer.KafkaConsumer     [ 961] : [Consumer clientId=consumer-group_json-1, groupId=group_json] Subscribed to topic(s): youngcha-coin-quote
+2021-10-11T22:53:59.158+0900  INFO 66130 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  [ 220] : Tomcat started on port(s): 5020 (http) with context path ''
+2021-10-11T22:53:59.163+0900  INFO 66130 --- [  restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration [ 144] : Updating port to 5020
+2021-10-11T22:53:59.527+0900  INFO 66130 --- [ntainer#0-0-C-1] org.apache.kafka.clients.Metadata        [ 279] : [Consumer clientId=consumer-group_json-1, groupId=group_json] Cluster ID: AYzsL0fZSuuLKFVSGcjb1w
+2021-10-11T22:53:59.532+0900  INFO 66130 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  [ 844] : [Consumer clientId=consumer-group_json-1, groupId=group_json] Discovered group coordinator broker-1:9092 (id: 2147483646 rack: null)
+2021-10-11T22:53:59.630+0900  INFO 66130 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  [ 538] : [Consumer clientId=consumer-group_json-1, groupId=group_json] (Re-)joining group
+2021-10-11T22:53:59.664+0900  INFO 66130 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  [ 538] : [Consumer clientId=consumer-group_json-1, groupId=group_json] (Re-)joining group
+2021-10-11T22:53:59.733+0900  INFO 66130 --- [  restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     [ 137] : Starting...
+2021-10-11T22:53:59.738+0900  INFO 66130 --- [  restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     [ 137] : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@1bcddcc9]]
+2021-10-11T22:53:59.739+0900  INFO 66130 --- [  restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     [ 137] : Started.
+2021-10-11T22:53:59.905+0900  INFO 66130 --- [  restartedMain] com.bithumb.ConsumerApplication          [  61] : Started ConsumerApplication in 17.517 seconds (JVM running for 24.436)
+2021-10-11T22:54:00.004+0900  WARN 66130 --- [led-task-pool-1] c.a.http.apache.utils.ApacheUtils        [ 246] : NoSuchMethodException was thrown when disabling normalizeUri. This indicates you are using an old version (< 4.5.8) of Apache http client. It is recommended to use http client version >= 4.5.9 to avoid the breaking change introduced in apache client 4.5.7 and the latency in exception handling. See https://github.com/aws/aws-sdk-java/issues/1919 for more information
+2021-10-11T22:54:01.111+0900  INFO 66130 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  [ 594] : [Consumer clientId=consumer-group_json-1, groupId=group_json] Successfully joined group with generation Generation{generationId=372, memberId='consumer-group_json-1-35ba85b8-506a-4417-aa93-55b92aab9c15', protocol='range'}
+2021-10-11T22:54:01.212+0900  INFO 66130 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  [ 754] : [Consumer clientId=consumer-group_json-1, groupId=group_json] Successfully synced group in generation Generation{generationId=372, memberId='consumer-group_json-1-35ba85b8-506a-4417-aa93-55b92aab9c15', protocol='range'}
+2021-10-11T22:54:01.258+0900  INFO 66130 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  [ 276] : [Consumer clientId=consumer-group_json-1, groupId=group_json] Notifying assignor about the new Assignment(partitions=[])
+2021-10-11T22:54:01.259+0900  INFO 66130 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  [ 288] : [Consumer clientId=consumer-group_json-1, groupId=group_json] Adding newly assigned partitions: 
+2021-10-11T22:54:01.289+0900  INFO 66130 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    [ 292] : group_json: partitions assigned: []
+2021-10-11T22:54:01.578+0900  INFO 66130 --- [(3)-172.30.1.35] o.a.c.c.C.[Tomcat].[localhost].[/]       [ 173] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-11T22:54:01.586+0900  INFO 66130 --- [(3)-172.30.1.35] o.s.web.servlet.DispatcherServlet        [ 525] : Initializing Servlet 'dispatcherServlet'
+2021-10-11T22:54:01.608+0900  INFO 66130 --- [(3)-172.30.1.35] o.s.web.servlet.DispatcherServlet        [ 547] : Completed initialization in 21 ms
+2021-10-11T22:54:03.431+0900  INFO 66080 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext [ 455] : Initializing Spring TestDispatcherServlet ''
+2021-10-11T22:54:03.438+0900  INFO 66080 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  [ 525] : Initializing Servlet ''
+2021-10-11T22:54:03.443+0900  INFO 66080 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  [ 547] : Completed initialization in 5 ms
+2021-10-11T22:54:04.303+0900  INFO 66080 --- [    Test worker] DiscoveryClientOptionalArgsConfiguration [  68] : Eureka HTTP Client uses RestTemplate.
+2021-10-11T22:54:04.624+0900  WARN 66080 --- [    Test worker] iguration$LoadBalancerCaffeineWarnLogger [  82] : Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2021-10-11T22:54:05.364+0900  INFO 66080 --- [    Test worker] o.s.i.endpoint.EventDrivenConsumer       [ 174] : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2021-10-11T22:54:05.369+0900  INFO 66080 --- [    Test worker] o.s.i.channel.PublishSubscribeChannel    [ 174] : Channel 'consumer.errorChannel' has 1 subscriber(s).
+2021-10-11T22:54:05.374+0900  INFO 66080 --- [    Test worker] o.s.i.endpoint.EventDrivenConsumer       [ 292] : started bean '_org.springframework.integration.errorLogger'
+2021-10-11T22:54:05.436+0900  INFO 66080 --- [    Test worker] o.s.c.n.eureka.InstanceInfoFactory       [  67] : Setting initial instance status as: STARTING
+2021-10-11T22:54:05.556+0900  INFO 66080 --- [    Test worker] com.netflix.discovery.DiscoveryClient    [ 372] : Initializing Eureka in region us-east-1
+2021-10-11T22:54:05.579+0900  INFO 66080 --- [    Test worker] c.n.d.s.r.aws.ConfigClusterResolver      [  43] : Resolving eureka endpoints via configuration
+2021-10-11T22:54:05.662+0900  INFO 66080 --- [    Test worker] com.netflix.discovery.DiscoveryClient    [1007] : Disable delta property : false
+2021-10-11T22:54:05.675+0900  INFO 66080 --- [    Test worker] com.netflix.discovery.DiscoveryClient    [1008] : Single vip registry refresh property : null
+2021-10-11T22:54:05.704+0900  INFO 66080 --- [    Test worker] com.netflix.discovery.DiscoveryClient    [1009] : Force full registry fetch : false
+2021-10-11T22:54:05.709+0900  INFO 66080 --- [    Test worker] com.netflix.discovery.DiscoveryClient    [1010] : Application is null : false
+2021-10-11T22:54:05.711+0900  INFO 66080 --- [    Test worker] com.netflix.discovery.DiscoveryClient    [1011] : Registered Applications size is zero : true
+2021-10-11T22:54:05.725+0900  INFO 66080 --- [    Test worker] com.netflix.discovery.DiscoveryClient    [1013] : Application version is -1: true
+2021-10-11T22:54:05.739+0900  INFO 66080 --- [    Test worker] com.netflix.discovery.DiscoveryClient    [1097] : Getting all instance registry info from the eureka server
+2021-10-11T22:54:06.183+0900  INFO 66080 --- [    Test worker] com.netflix.discovery.DiscoveryClient    [1106] : The response status is 200
+2021-10-11T22:54:06.196+0900  INFO 66080 --- [    Test worker] com.netflix.discovery.DiscoveryClient    [1321] : Starting heartbeat executor: renew interval is: 30
+2021-10-11T22:54:06.200+0900  INFO 66080 --- [    Test worker] c.n.discovery.InstanceInfoReplicator     [  60] : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2021-10-11T22:54:06.214+0900  INFO 66080 --- [    Test worker] com.netflix.discovery.DiscoveryClient    [ 492] : Discovery Client initialized at timestamp 1633960446213 with initial instances count: 11
+2021-10-11T22:54:06.248+0900  INFO 66080 --- [    Test worker] o.s.c.n.e.s.EurekaServiceRegistry        [  41] : Registering application CONSUMER with eureka with status UP
+2021-10-11T22:54:06.249+0900  INFO 66080 --- [    Test worker] com.netflix.discovery.DiscoveryClient    [1352] : Saw local status change event StatusChangeEvent [timestamp=1633960446249, current=UP, previous=STARTING]
+2021-10-11T22:54:06.255+0900  INFO 66080 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    [ 873] : DiscoveryClient_CONSUMER/172.30.1.35:consumer:5020: registering service...
+2021-10-11T22:54:06.362+0900  INFO 66080 --- [    Test worker] o.a.k.clients.consumer.ConsumerConfig    [ 361] : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [3.36.162.130:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-group_json-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = group_json
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	socket.connection.setup.timeout.max.ms = 127000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2021-10-11T22:54:06.424+0900  INFO 66080 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    [ 882] : DiscoveryClient_CONSUMER/172.30.1.35:consumer:5020 - registration status: 204
+2021-10-11T22:54:06.553+0900  INFO 66080 --- [    Test worker] o.a.kafka.common.utils.AppInfoParser     [ 119] : Kafka version: 2.7.1
+2021-10-11T22:54:06.560+0900  INFO 66080 --- [    Test worker] o.a.kafka.common.utils.AppInfoParser     [ 120] : Kafka commitId: 61dbce85d0d41457
+2021-10-11T22:54:06.564+0900  INFO 66080 --- [    Test worker] o.a.kafka.common.utils.AppInfoParser     [ 121] : Kafka startTimeMs: 1633960446531
+2021-10-11T22:54:06.576+0900  INFO 66080 --- [    Test worker] o.a.k.clients.consumer.KafkaConsumer     [ 961] : [Consumer clientId=consumer-group_json-1, groupId=group_json] Subscribed to topic(s): youngcha-coin-quote
+2021-10-11T22:54:07.138+0900  INFO 66080 --- [ntainer#0-0-C-1] org.apache.kafka.clients.Metadata        [ 279] : [Consumer clientId=consumer-group_json-1, groupId=group_json] Cluster ID: AYzsL0fZSuuLKFVSGcjb1w
+2021-10-11T22:54:07.146+0900  INFO 66080 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  [ 844] : [Consumer clientId=consumer-group_json-1, groupId=group_json] Discovered group coordinator broker-1:9092 (id: 2147483646 rack: null)
+2021-10-11T22:54:07.168+0900  INFO 66080 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  [ 538] : [Consumer clientId=consumer-group_json-1, groupId=group_json] (Re-)joining group
+2021-10-11T22:54:07.195+0900  INFO 66080 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  [ 538] : [Consumer clientId=consumer-group_json-1, groupId=group_json] (Re-)joining group
+2021-10-11T22:54:07.340+0900  INFO 66080 --- [    Test worker] o.s.m.s.b.SimpleBrokerMessageHandler     [ 137] : Starting...
+2021-10-11T22:54:07.341+0900  INFO 66080 --- [    Test worker] o.s.m.s.b.SimpleBrokerMessageHandler     [ 137] : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@293c7765]]
+2021-10-11T22:54:07.344+0900  INFO 66080 --- [    Test worker] o.s.m.s.b.SimpleBrokerMessageHandler     [ 137] : Started.
+2021-10-11T22:54:07.442+0900  INFO 66080 --- [    Test worker] c.b.c.controller.CandleControllerTest    [  61] : Started CandleControllerTest in 39.026 seconds (JVM running for 42.267)
+2021-10-11T22:54:07.602+0900 ERROR 66130 --- [led-task-pool-2] o.s.s.s.TaskUtils$LoggingErrorHandler    [  95] : Unexpected error occurred in scheduled task
+
+org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to redis:6379
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.translateException(LettuceConnectionFactory.java:1671)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1579)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1365)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getConnection(LettuceConnectionFactory.java:1348)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getSharedConnection(LettuceConnectionFactory.java:1089)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getConnection(LettuceConnectionFactory.java:421)
+	at org.springframework.data.redis.core.RedisConnectionUtils.fetchConnection(RedisConnectionUtils.java:193)
+	at org.springframework.data.redis.core.RedisConnectionUtils.doGetConnection(RedisConnectionUtils.java:144)
+	at org.springframework.data.redis.core.RedisConnectionUtils.getConnection(RedisConnectionUtils.java:105)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:209)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:189)
+	at org.springframework.data.redis.core.AbstractOperations.execute(AbstractOperations.java:96)
+	at org.springframework.data.redis.core.DefaultZSetOperations.zCard(DefaultZSetOperations.java:479)
+	at org.springframework.data.redis.core.DefaultZSetOperations.size(DefaultZSetOperations.java:468)
+	at com.bithumb.candlestick.service.Scheduler.schedule30MTask(Scheduler.java:97)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: io.lettuce.core.RedisConnectionException: Unable to connect to redis:6379
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:78)
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:56)
+	at io.lettuce.core.AbstractRedisClient.getConnection(AbstractRedisClient.java:330)
+	at io.lettuce.core.RedisClient.connect(RedisClient.java:216)
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.lambda$getConnection$1(StandaloneConnectionProvider.java:115)
+	at java.base/java.util.Optional.orElseGet(Optional.java:369)
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.getConnection(StandaloneConnectionProvider.java:115)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1577)
+	... 25 common frames omitted
+Caused by: java.net.UnknownHostException: failed to resolve 'redis' after 4 queries 
+	at io.netty.resolver.dns.DnsResolveContext.finishResolve(DnsResolveContext.java:1046)
+	at io.netty.resolver.dns.DnsResolveContext.tryToFinishResolve(DnsResolveContext.java:999)
+	at io.netty.resolver.dns.DnsResolveContext.query(DnsResolveContext.java:417)
+	at io.netty.resolver.dns.DnsResolveContext.onResponse(DnsResolveContext.java:628)
+	at io.netty.resolver.dns.DnsResolveContext.access$400(DnsResolveContext.java:65)
+	at io.netty.resolver.dns.DnsResolveContext$2.operationComplete(DnsResolveContext.java:461)
+	at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:578)
+	at io.netty.util.concurrent.DefaultPromise.notifyListeners0(DefaultPromise.java:571)
+	at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:550)
+	at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:491)
+	at io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:616)
+	at io.netty.util.concurrent.DefaultPromise.setSuccess0(DefaultPromise.java:605)
+	at io.netty.util.concurrent.DefaultPromise.trySuccess(DefaultPromise.java:104)
+	at io.netty.resolver.dns.DnsQueryContext.trySuccess(DnsQueryContext.java:201)
+	at io.netty.resolver.dns.DnsQueryContext.finish(DnsQueryContext.java:193)
+	at io.netty.resolver.dns.DnsNameResolver$DnsResponseHandler.channelRead(DnsNameResolver.java:1301)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:103)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.nio.AbstractNioMessageChannel$NioMessageUnsafe.read(AbstractNioMessageChannel.java:97)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 common frames omitted
+
+2021-10-11T22:54:07.602+0900  WARN 66130 --- [oundedElastic-1] o.s.b.a.r.RedisReactiveHealthIndicator   [  89] : Redis health check failed
+
+org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to redis:6379
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.translateException(LettuceConnectionFactory.java:1671)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1579)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1365)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getConnection(LettuceConnectionFactory.java:1348)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getSharedReactiveConnection(LettuceConnectionFactory.java:1099)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getReactiveConnection(LettuceConnectionFactory.java:511)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getReactiveConnection(LettuceConnectionFactory.java:103)
+	at reactor.core.publisher.MonoSupplier.call(MonoSupplier.java:86)
+	at reactor.core.publisher.FluxSubscribeOnCallable$CallableSubscribeOnSubscription.run(FluxSubscribeOnCallable.java:227)
+	at reactor.core.scheduler.SchedulerTask.call(SchedulerTask.java:68)
+	at reactor.core.scheduler.SchedulerTask.call(SchedulerTask.java:28)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: io.lettuce.core.RedisConnectionException: Unable to connect to redis:6379
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:78)
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:56)
+	at io.lettuce.core.AbstractRedisClient.getConnection(AbstractRedisClient.java:330)
+	at io.lettuce.core.RedisClient.connect(RedisClient.java:216)
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.lambda$getConnection$1(StandaloneConnectionProvider.java:115)
+	at java.base/java.util.Optional.orElseGet(Optional.java:369)
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.getConnection(StandaloneConnectionProvider.java:115)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1577)
+	... 14 common frames omitted
+Caused by: java.net.UnknownHostException: failed to resolve 'redis' after 4 queries 
+	at io.netty.resolver.dns.DnsResolveContext.finishResolve(DnsResolveContext.java:1046)
+	at io.netty.resolver.dns.DnsResolveContext.tryToFinishResolve(DnsResolveContext.java:999)
+	at io.netty.resolver.dns.DnsResolveContext.query(DnsResolveContext.java:417)
+	at io.netty.resolver.dns.DnsResolveContext.onResponse(DnsResolveContext.java:628)
+	at io.netty.resolver.dns.DnsResolveContext.access$400(DnsResolveContext.java:65)
+	at io.netty.resolver.dns.DnsResolveContext$2.operationComplete(DnsResolveContext.java:461)
+	at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:578)
+	at io.netty.util.concurrent.DefaultPromise.notifyListeners0(DefaultPromise.java:571)
+	at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:550)
+	at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:491)
+	at io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:616)
+	at io.netty.util.concurrent.DefaultPromise.setSuccess0(DefaultPromise.java:605)
+	at io.netty.util.concurrent.DefaultPromise.trySuccess(DefaultPromise.java:104)
+	at io.netty.resolver.dns.DnsQueryContext.trySuccess(DnsQueryContext.java:201)
+	at io.netty.resolver.dns.DnsQueryContext.finish(DnsQueryContext.java:193)
+	at io.netty.resolver.dns.DnsNameResolver$DnsResponseHandler.channelRead(DnsNameResolver.java:1301)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:103)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.nio.AbstractNioMessageChannel$NioMessageUnsafe.read(AbstractNioMessageChannel.java:97)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 common frames omitted
+
+2021-10-11T22:54:07.631+0900  WARN 66080 --- [led-task-pool-3] c.a.http.apache.utils.ApacheUtils        [ 246] : NoSuchMethodException was thrown when disabling normalizeUri. This indicates you are using an old version (< 4.5.8) of Apache http client. It is recommended to use http client version >= 4.5.9 to avoid the breaking change introduced in apache client 4.5.7 and the latency in exception handling. See https://github.com/aws/aws-sdk-java/issues/1919 for more information
+2021-10-11T22:54:07.778+0900 ERROR 66130 --- [led-task-pool-1] o.s.s.s.TaskUtils$LoggingErrorHandler    [  95] : Unexpected error occurred in scheduled task
+
+org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to redis:6379
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.translateException(LettuceConnectionFactory.java:1671)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1579)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1365)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getConnection(LettuceConnectionFactory.java:1348)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getSharedConnection(LettuceConnectionFactory.java:1089)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getConnection(LettuceConnectionFactory.java:421)
+	at org.springframework.data.redis.core.RedisConnectionUtils.fetchConnection(RedisConnectionUtils.java:193)
+	at org.springframework.data.redis.core.RedisConnectionUtils.doGetConnection(RedisConnectionUtils.java:144)
+	at org.springframework.data.redis.core.RedisConnectionUtils.getConnection(RedisConnectionUtils.java:105)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:209)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:189)
+	at org.springframework.data.redis.core.AbstractOperations.execute(AbstractOperations.java:96)
+	at org.springframework.data.redis.core.DefaultZSetOperations.zCard(DefaultZSetOperations.java:479)
+	at org.springframework.data.redis.core.DefaultZSetOperations.size(DefaultZSetOperations.java:468)
+	at com.bithumb.candlestick.service.Scheduler.schedule1HTask(Scheduler.java:64)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: io.lettuce.core.RedisConnectionException: Unable to connect to redis:6379
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:78)
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:56)
+	at io.lettuce.core.AbstractRedisClient.getConnection(AbstractRedisClient.java:330)
+	at io.lettuce.core.RedisClient.connect(RedisClient.java:216)
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.lambda$getConnection$1(StandaloneConnectionProvider.java:115)
+	at java.base/java.util.Optional.orElseGet(Optional.java:369)
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.getConnection(StandaloneConnectionProvider.java:115)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1577)
+	... 25 common frames omitted
+Caused by: java.net.UnknownHostException: failed to resolve 'redis' after 4 queries 
+	at io.netty.resolver.dns.DnsResolveContext.finishResolve(DnsResolveContext.java:1046)
+	at io.netty.resolver.dns.DnsResolveContext.tryToFinishResolve(DnsResolveContext.java:999)
+	at io.netty.resolver.dns.DnsResolveContext.query(DnsResolveContext.java:417)
+	at io.netty.resolver.dns.DnsResolveContext.onResponse(DnsResolveContext.java:628)
+	at io.netty.resolver.dns.DnsResolveContext.access$400(DnsResolveContext.java:65)
+	at io.netty.resolver.dns.DnsResolveContext$2.operationComplete(DnsResolveContext.java:461)
+	at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:578)
+	at io.netty.util.concurrent.DefaultPromise.notifyListeners0(DefaultPromise.java:571)
+	at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:550)
+	at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:491)
+	at io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:616)
+	at io.netty.util.concurrent.DefaultPromise.setSuccess0(DefaultPromise.java:605)
+	at io.netty.util.concurrent.DefaultPromise.trySuccess(DefaultPromise.java:104)
+	at io.netty.resolver.dns.DnsQueryContext.trySuccess(DnsQueryContext.java:201)
+	at io.netty.resolver.dns.DnsQueryContext.finish(DnsQueryContext.java:193)
+	at io.netty.resolver.dns.DnsNameResolver$DnsResponseHandler.channelRead(DnsNameResolver.java:1301)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:103)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.nio.AbstractNioMessageChannel$NioMessageUnsafe.read(AbstractNioMessageChannel.java:97)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 common frames omitted
+
+2021-10-11T22:54:07.899+0900 ERROR 66130 --- [led-task-pool-3] o.s.s.s.TaskUtils$LoggingErrorHandler    [  95] : Unexpected error occurred in scheduled task
+
+org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to redis:6379
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.translateException(LettuceConnectionFactory.java:1671)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1579)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1365)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getConnection(LettuceConnectionFactory.java:1348)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getSharedConnection(LettuceConnectionFactory.java:1089)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getConnection(LettuceConnectionFactory.java:421)
+	at org.springframework.data.redis.core.RedisConnectionUtils.fetchConnection(RedisConnectionUtils.java:193)
+	at org.springframework.data.redis.core.RedisConnectionUtils.doGetConnection(RedisConnectionUtils.java:144)
+	at org.springframework.data.redis.core.RedisConnectionUtils.getConnection(RedisConnectionUtils.java:105)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:209)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:189)
+	at org.springframework.data.redis.core.AbstractOperations.execute(AbstractOperations.java:96)
+	at org.springframework.data.redis.core.DefaultZSetOperations.zCard(DefaultZSetOperations.java:479)
+	at org.springframework.data.redis.core.DefaultZSetOperations.size(DefaultZSetOperations.java:468)
+	at com.bithumb.candlestick.service.Scheduler.schedule10MTask(Scheduler.java:131)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: io.lettuce.core.RedisConnectionException: Unable to connect to redis:6379
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:78)
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:56)
+	at io.lettuce.core.AbstractRedisClient.getConnection(AbstractRedisClient.java:330)
+	at io.lettuce.core.RedisClient.connect(RedisClient.java:216)
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.lambda$getConnection$1(StandaloneConnectionProvider.java:115)
+	at java.base/java.util.Optional.orElseGet(Optional.java:369)
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.getConnection(StandaloneConnectionProvider.java:115)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1577)
+	... 25 common frames omitted
+Caused by: java.net.UnknownHostException: failed to resolve 'redis' after 4 queries 
+	at io.netty.resolver.dns.DnsResolveContext.finishResolve(DnsResolveContext.java:1046)
+	at io.netty.resolver.dns.DnsResolveContext.tryToFinishResolve(DnsResolveContext.java:999)
+	at io.netty.resolver.dns.DnsResolveContext.query(DnsResolveContext.java:417)
+	at io.netty.resolver.dns.DnsResolveContext.onResponse(DnsResolveContext.java:628)
+	at io.netty.resolver.dns.DnsResolveContext.access$400(DnsResolveContext.java:65)
+	at io.netty.resolver.dns.DnsResolveContext$2.operationComplete(DnsResolveContext.java:461)
+	at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:578)
+	at io.netty.util.concurrent.DefaultPromise.notifyListeners0(DefaultPromise.java:571)
+	at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:550)
+	at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:491)
+	at io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:616)
+	at io.netty.util.concurrent.DefaultPromise.setSuccess0(DefaultPromise.java:605)
+	at io.netty.util.concurrent.DefaultPromise.trySuccess(DefaultPromise.java:104)
+	at io.netty.resolver.dns.DnsQueryContext.trySuccess(DnsQueryContext.java:201)
+	at io.netty.resolver.dns.DnsQueryContext.finish(DnsQueryContext.java:193)
+	at io.netty.resolver.dns.DnsNameResolver$DnsResponseHandler.channelRead(DnsNameResolver.java:1301)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:103)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.nio.AbstractNioMessageChannel$NioMessageUnsafe.read(AbstractNioMessageChannel.java:97)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 common frames omitted
+
+2021-10-11T22:54:08.128+0900 ERROR 66130 --- [led-task-pool-4] o.s.s.s.TaskUtils$LoggingErrorHandler    [  95] : Unexpected error occurred in scheduled task
+
+org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to redis:6379
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.translateException(LettuceConnectionFactory.java:1671)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1579)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1365)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getConnection(LettuceConnectionFactory.java:1348)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getSharedConnection(LettuceConnectionFactory.java:1089)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getConnection(LettuceConnectionFactory.java:421)
+	at org.springframework.data.redis.core.RedisConnectionUtils.fetchConnection(RedisConnectionUtils.java:193)
+	at org.springframework.data.redis.core.RedisConnectionUtils.doGetConnection(RedisConnectionUtils.java:144)
+	at org.springframework.data.redis.core.RedisConnectionUtils.getConnection(RedisConnectionUtils.java:105)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:209)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:189)
+	at org.springframework.data.redis.core.AbstractOperations.execute(AbstractOperations.java:96)
+	at org.springframework.data.redis.core.DefaultZSetOperations.zCard(DefaultZSetOperations.java:479)
+	at org.springframework.data.redis.core.DefaultZSetOperations.size(DefaultZSetOperations.java:468)
+	at com.bithumb.candlestick.service.Scheduler.schedule24HTask(Scheduler.java:31)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: io.lettuce.core.RedisConnectionException: Unable to connect to redis:6379
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:78)
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:56)
+	at io.lettuce.core.AbstractRedisClient.getConnection(AbstractRedisClient.java:330)
+	at io.lettuce.core.RedisClient.connect(RedisClient.java:216)
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.lambda$getConnection$1(StandaloneConnectionProvider.java:115)
+	at java.base/java.util.Optional.orElseGet(Optional.java:369)
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.getConnection(StandaloneConnectionProvider.java:115)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1577)
+	... 25 common frames omitted
+Caused by: java.net.UnknownHostException: failed to resolve 'redis' after 4 queries 
+	at io.netty.resolver.dns.DnsResolveContext.finishResolve(DnsResolveContext.java:1046)
+	at io.netty.resolver.dns.DnsResolveContext.tryToFinishResolve(DnsResolveContext.java:999)
+	at io.netty.resolver.dns.DnsResolveContext.query(DnsResolveContext.java:417)
+	at io.netty.resolver.dns.DnsResolveContext.onResponse(DnsResolveContext.java:628)
+	at io.netty.resolver.dns.DnsResolveContext.access$400(DnsResolveContext.java:65)
+	at io.netty.resolver.dns.DnsResolveContext$2.operationComplete(DnsResolveContext.java:461)
+	at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:578)
+	at io.netty.util.concurrent.DefaultPromise.notifyListeners0(DefaultPromise.java:571)
+	at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:550)
+	at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:491)
+	at io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:616)
+	at io.netty.util.concurrent.DefaultPromise.setSuccess0(DefaultPromise.java:605)
+	at io.netty.util.concurrent.DefaultPromise.trySuccess(DefaultPromise.java:104)
+	at io.netty.resolver.dns.DnsQueryContext.trySuccess(DnsQueryContext.java:201)
+	at io.netty.resolver.dns.DnsQueryContext.finish(DnsQueryContext.java:193)
+	at io.netty.resolver.dns.DnsNameResolver$DnsResponseHandler.channelRead(DnsNameResolver.java:1301)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:103)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.nio.AbstractNioMessageChannel$NioMessageUnsafe.read(AbstractNioMessageChannel.java:97)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 common frames omitted
+
+2021-10-11T22:54:09.802+0900  INFO 66080 --- [    Test worker] c.b.c.controller.CandleController        [  32] : 차트 데이터
+2021-10-11T22:54:10.132+0900  INFO 66130 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  [1119] : [Consumer clientId=consumer-group_json-1, groupId=group_json] Attempt to heartbeat failed since group is rebalancing
+2021-10-11T22:54:10.141+0900  INFO 66130 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  [ 307] : [Consumer clientId=consumer-group_json-1, groupId=group_json] Revoke previously assigned partitions 
+2021-10-11T22:54:10.144+0900  INFO 66130 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    [ 292] : group_json: partitions revoked: []
+2021-10-11T22:54:10.146+0900  INFO 66130 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  [ 538] : [Consumer clientId=consumer-group_json-1, groupId=group_json] (Re-)joining group
+2021-10-11T22:54:10.154+0900  INFO 66130 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  [ 594] : [Consumer clientId=consumer-group_json-1, groupId=group_json] Successfully joined group with generation Generation{generationId=373, memberId='consumer-group_json-1-35ba85b8-506a-4417-aa93-55b92aab9c15', protocol='range'}
+2021-10-11T22:54:10.164+0900  INFO 66080 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  [ 594] : [Consumer clientId=consumer-group_json-1, groupId=group_json] Successfully joined group with generation Generation{generationId=373, memberId='consumer-group_json-1-5ce4cac5-f7e3-411f-9a64-b1cf7c4a15b3', protocol='range'}
+2021-10-11T22:54:10.171+0900  INFO 66130 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  [ 754] : [Consumer clientId=consumer-group_json-1, groupId=group_json] Successfully synced group in generation Generation{generationId=373, memberId='consumer-group_json-1-35ba85b8-506a-4417-aa93-55b92aab9c15', protocol='range'}
+2021-10-11T22:54:10.172+0900  INFO 66130 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  [ 276] : [Consumer clientId=consumer-group_json-1, groupId=group_json] Notifying assignor about the new Assignment(partitions=[])
+2021-10-11T22:54:10.172+0900  INFO 66130 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  [ 288] : [Consumer clientId=consumer-group_json-1, groupId=group_json] Adding newly assigned partitions: 
+2021-10-11T22:54:10.172+0900  INFO 66130 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    [ 292] : group_json: partitions assigned: []
+2021-10-11T22:54:10.191+0900  INFO 66080 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  [ 754] : [Consumer clientId=consumer-group_json-1, groupId=group_json] Successfully synced group in generation Generation{generationId=373, memberId='consumer-group_json-1-5ce4cac5-f7e3-411f-9a64-b1cf7c4a15b3', protocol='range'}
+2021-10-11T22:54:10.198+0900  INFO 66080 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  [ 276] : [Consumer clientId=consumer-group_json-1, groupId=group_json] Notifying assignor about the new Assignment(partitions=[])
+2021-10-11T22:54:10.199+0900  INFO 66080 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  [ 288] : [Consumer clientId=consumer-group_json-1, groupId=group_json] Adding newly assigned partitions: 
+2021-10-11T22:54:10.202+0900  INFO 66080 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    [ 292] : group_json: partitions assigned: []
+2021-10-11T22:54:14.728+0900  INFO 66130 --- [nio-5020-exec-6] c.b.c.controller.CandleController        [  32] : 차트 데이터
+2021-10-11T22:54:14.818+0900  WARN 66130 --- [nio-5020-exec-6] .m.m.a.ExceptionHandlerExceptionResolver [ 207] : Resolved [org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to redis:6379]
+2021-10-11T22:54:15.537+0900 ERROR 66080 --- [led-task-pool-2] o.s.s.s.TaskUtils$LoggingErrorHandler    [  95] : Unexpected error occurred in scheduled task
+
+org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to redis:6379
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.translateException(LettuceConnectionFactory.java:1671)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1579)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1365)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getConnection(LettuceConnectionFactory.java:1348)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getSharedConnection(LettuceConnectionFactory.java:1089)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getConnection(LettuceConnectionFactory.java:421)
+	at org.springframework.data.redis.core.RedisConnectionUtils.fetchConnection(RedisConnectionUtils.java:193)
+	at org.springframework.data.redis.core.RedisConnectionUtils.doGetConnection(RedisConnectionUtils.java:144)
+	at org.springframework.data.redis.core.RedisConnectionUtils.getConnection(RedisConnectionUtils.java:105)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:209)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:189)
+	at org.springframework.data.redis.core.AbstractOperations.execute(AbstractOperations.java:96)
+	at org.springframework.data.redis.core.DefaultZSetOperations.zCard(DefaultZSetOperations.java:479)
+	at org.springframework.data.redis.core.DefaultZSetOperations.size(DefaultZSetOperations.java:468)
+	at com.bithumb.candlestick.service.Scheduler.schedule1HTask(Scheduler.java:64)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: io.lettuce.core.RedisConnectionException: Unable to connect to redis:6379
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:78)
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:56)
+	at io.lettuce.core.AbstractRedisClient.getConnection(AbstractRedisClient.java:330)
+	at io.lettuce.core.RedisClient.connect(RedisClient.java:216)
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.lambda$getConnection$1(StandaloneConnectionProvider.java:115)
+	at java.base/java.util.Optional.orElseGet(Optional.java:369)
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.getConnection(StandaloneConnectionProvider.java:115)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1577)
+	... 25 common frames omitted
+Caused by: java.net.UnknownHostException: failed to resolve 'redis' after 4 queries 
+	at io.netty.resolver.dns.DnsResolveContext.finishResolve(DnsResolveContext.java:1046)
+	at io.netty.resolver.dns.DnsResolveContext.tryToFinishResolve(DnsResolveContext.java:999)
+	at io.netty.resolver.dns.DnsResolveContext.query(DnsResolveContext.java:417)
+	at io.netty.resolver.dns.DnsResolveContext.onResponse(DnsResolveContext.java:628)
+	at io.netty.resolver.dns.DnsResolveContext.access$400(DnsResolveContext.java:65)
+	at io.netty.resolver.dns.DnsResolveContext$2.operationComplete(DnsResolveContext.java:461)
+	at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:578)
+	at io.netty.util.concurrent.DefaultPromise.notifyListeners0(DefaultPromise.java:571)
+	at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:550)
+	at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:491)
+	at io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:616)
+	at io.netty.util.concurrent.DefaultPromise.setSuccess0(DefaultPromise.java:605)
+	at io.netty.util.concurrent.DefaultPromise.trySuccess(DefaultPromise.java:104)
+	at io.netty.resolver.dns.DnsQueryContext.trySuccess(DnsQueryContext.java:201)
+	at io.netty.resolver.dns.DnsQueryContext.finish(DnsQueryContext.java:193)
+	at io.netty.resolver.dns.DnsNameResolver$DnsResponseHandler.channelRead(DnsNameResolver.java:1301)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:103)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.nio.AbstractNioMessageChannel$NioMessageUnsafe.read(AbstractNioMessageChannel.java:97)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 common frames omitted
+
+2021-10-11T22:54:15.670+0900 ERROR 66080 --- [led-task-pool-1] o.s.s.s.TaskUtils$LoggingErrorHandler    [  95] : Unexpected error occurred in scheduled task
+
+org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to redis:6379
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.translateException(LettuceConnectionFactory.java:1671)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1579)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1365)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getConnection(LettuceConnectionFactory.java:1348)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getSharedConnection(LettuceConnectionFactory.java:1089)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getConnection(LettuceConnectionFactory.java:421)
+	at org.springframework.data.redis.core.RedisConnectionUtils.fetchConnection(RedisConnectionUtils.java:193)
+	at org.springframework.data.redis.core.RedisConnectionUtils.doGetConnection(RedisConnectionUtils.java:144)
+	at org.springframework.data.redis.core.RedisConnectionUtils.getConnection(RedisConnectionUtils.java:105)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:209)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:189)
+	at org.springframework.data.redis.core.AbstractOperations.execute(AbstractOperations.java:96)
+	at org.springframework.data.redis.core.DefaultZSetOperations.zCard(DefaultZSetOperations.java:479)
+	at org.springframework.data.redis.core.DefaultZSetOperations.size(DefaultZSetOperations.java:468)
+	at com.bithumb.candlestick.service.Scheduler.schedule24HTask(Scheduler.java:31)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: io.lettuce.core.RedisConnectionException: Unable to connect to redis:6379
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:78)
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:56)
+	at io.lettuce.core.AbstractRedisClient.getConnection(AbstractRedisClient.java:330)
+	at io.lettuce.core.RedisClient.connect(RedisClient.java:216)
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.lambda$getConnection$1(StandaloneConnectionProvider.java:115)
+	at java.base/java.util.Optional.orElseGet(Optional.java:369)
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.getConnection(StandaloneConnectionProvider.java:115)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1577)
+	... 25 common frames omitted
+Caused by: java.net.UnknownHostException: failed to resolve 'redis' after 4 queries 
+	at io.netty.resolver.dns.DnsResolveContext.finishResolve(DnsResolveContext.java:1046)
+	at io.netty.resolver.dns.DnsResolveContext.tryToFinishResolve(DnsResolveContext.java:999)
+	at io.netty.resolver.dns.DnsResolveContext.query(DnsResolveContext.java:417)
+	at io.netty.resolver.dns.DnsResolveContext.onResponse(DnsResolveContext.java:628)
+	at io.netty.resolver.dns.DnsResolveContext.access$400(DnsResolveContext.java:65)
+	at io.netty.resolver.dns.DnsResolveContext$2.operationComplete(DnsResolveContext.java:461)
+	at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:578)
+	at io.netty.util.concurrent.DefaultPromise.notifyListeners0(DefaultPromise.java:571)
+	at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:550)
+	at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:491)
+	at io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:616)
+	at io.netty.util.concurrent.DefaultPromise.setSuccess0(DefaultPromise.java:605)
+	at io.netty.util.concurrent.DefaultPromise.trySuccess(DefaultPromise.java:104)
+	at io.netty.resolver.dns.DnsQueryContext.trySuccess(DnsQueryContext.java:201)
+	at io.netty.resolver.dns.DnsQueryContext.finish(DnsQueryContext.java:193)
+	at io.netty.resolver.dns.DnsNameResolver$DnsResponseHandler.channelRead(DnsNameResolver.java:1301)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:103)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.nio.AbstractNioMessageChannel$NioMessageUnsafe.read(AbstractNioMessageChannel.java:97)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 common frames omitted
+
+2021-10-11T22:54:15.743+0900 ERROR 66080 --- [led-task-pool-4] o.s.s.s.TaskUtils$LoggingErrorHandler    [  95] : Unexpected error occurred in scheduled task
+
+org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to redis:6379
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.translateException(LettuceConnectionFactory.java:1671)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1579)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1365)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getConnection(LettuceConnectionFactory.java:1348)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getSharedConnection(LettuceConnectionFactory.java:1089)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getConnection(LettuceConnectionFactory.java:421)
+	at org.springframework.data.redis.core.RedisConnectionUtils.fetchConnection(RedisConnectionUtils.java:193)
+	at org.springframework.data.redis.core.RedisConnectionUtils.doGetConnection(RedisConnectionUtils.java:144)
+	at org.springframework.data.redis.core.RedisConnectionUtils.getConnection(RedisConnectionUtils.java:105)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:209)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:189)
+	at org.springframework.data.redis.core.AbstractOperations.execute(AbstractOperations.java:96)
+	at org.springframework.data.redis.core.DefaultZSetOperations.zCard(DefaultZSetOperations.java:479)
+	at org.springframework.data.redis.core.DefaultZSetOperations.size(DefaultZSetOperations.java:468)
+	at com.bithumb.candlestick.service.Scheduler.schedule10MTask(Scheduler.java:131)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: io.lettuce.core.RedisConnectionException: Unable to connect to redis:6379
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:78)
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:56)
+	at io.lettuce.core.AbstractRedisClient.getConnection(AbstractRedisClient.java:330)
+	at io.lettuce.core.RedisClient.connect(RedisClient.java:216)
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.lambda$getConnection$1(StandaloneConnectionProvider.java:115)
+	at java.base/java.util.Optional.orElseGet(Optional.java:369)
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.getConnection(StandaloneConnectionProvider.java:115)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1577)
+	... 25 common frames omitted
+Caused by: java.net.UnknownHostException: failed to resolve 'redis' after 4 queries 
+	at io.netty.resolver.dns.DnsResolveContext.finishResolve(DnsResolveContext.java:1046)
+	at io.netty.resolver.dns.DnsResolveContext.tryToFinishResolve(DnsResolveContext.java:999)
+	at io.netty.resolver.dns.DnsResolveContext.query(DnsResolveContext.java:417)
+	at io.netty.resolver.dns.DnsResolveContext.onResponse(DnsResolveContext.java:628)
+	at io.netty.resolver.dns.DnsResolveContext.access$400(DnsResolveContext.java:65)
+	at io.netty.resolver.dns.DnsResolveContext$2.operationComplete(DnsResolveContext.java:461)
+	at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:578)
+	at io.netty.util.concurrent.DefaultPromise.notifyListeners0(DefaultPromise.java:571)
+	at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:550)
+	at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:491)
+	at io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:616)
+	at io.netty.util.concurrent.DefaultPromise.setSuccess0(DefaultPromise.java:605)
+	at io.netty.util.concurrent.DefaultPromise.trySuccess(DefaultPromise.java:104)
+	at io.netty.resolver.dns.DnsQueryContext.trySuccess(DnsQueryContext.java:201)
+	at io.netty.resolver.dns.DnsQueryContext.finish(DnsQueryContext.java:193)
+	at io.netty.resolver.dns.DnsNameResolver$DnsResponseHandler.channelRead(DnsNameResolver.java:1301)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:103)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.nio.AbstractNioMessageChannel$NioMessageUnsafe.read(AbstractNioMessageChannel.java:97)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 common frames omitted
+
+2021-10-11T22:54:15.834+0900 ERROR 66080 --- [led-task-pool-3] o.s.s.s.TaskUtils$LoggingErrorHandler    [  95] : Unexpected error occurred in scheduled task
+
+org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to redis:6379
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.translateException(LettuceConnectionFactory.java:1671)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1579)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1365)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getConnection(LettuceConnectionFactory.java:1348)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getSharedConnection(LettuceConnectionFactory.java:1089)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getConnection(LettuceConnectionFactory.java:421)
+	at org.springframework.data.redis.core.RedisConnectionUtils.fetchConnection(RedisConnectionUtils.java:193)
+	at org.springframework.data.redis.core.RedisConnectionUtils.doGetConnection(RedisConnectionUtils.java:144)
+	at org.springframework.data.redis.core.RedisConnectionUtils.getConnection(RedisConnectionUtils.java:105)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:209)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:189)
+	at org.springframework.data.redis.core.AbstractOperations.execute(AbstractOperations.java:96)
+	at org.springframework.data.redis.core.DefaultZSetOperations.zCard(DefaultZSetOperations.java:479)
+	at org.springframework.data.redis.core.DefaultZSetOperations.size(DefaultZSetOperations.java:468)
+	at com.bithumb.candlestick.service.Scheduler.schedule30MTask(Scheduler.java:97)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: io.lettuce.core.RedisConnectionException: Unable to connect to redis:6379
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:78)
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:56)
+	at io.lettuce.core.AbstractRedisClient.getConnection(AbstractRedisClient.java:330)
+	at io.lettuce.core.RedisClient.connect(RedisClient.java:216)
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.lambda$getConnection$1(StandaloneConnectionProvider.java:115)
+	at java.base/java.util.Optional.orElseGet(Optional.java:369)
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.getConnection(StandaloneConnectionProvider.java:115)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1577)
+	... 25 common frames omitted
+Caused by: java.net.UnknownHostException: failed to resolve 'redis' after 4 queries 
+	at io.netty.resolver.dns.DnsResolveContext.finishResolve(DnsResolveContext.java:1046)
+	at io.netty.resolver.dns.DnsResolveContext.tryToFinishResolve(DnsResolveContext.java:999)
+	at io.netty.resolver.dns.DnsResolveContext.query(DnsResolveContext.java:417)
+	at io.netty.resolver.dns.DnsResolveContext.onResponse(DnsResolveContext.java:628)
+	at io.netty.resolver.dns.DnsResolveContext.access$400(DnsResolveContext.java:65)
+	at io.netty.resolver.dns.DnsResolveContext$2.operationComplete(DnsResolveContext.java:461)
+	at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:578)
+	at io.netty.util.concurrent.DefaultPromise.notifyListeners0(DefaultPromise.java:571)
+	at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:550)
+	at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:491)
+	at io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:616)
+	at io.netty.util.concurrent.DefaultPromise.setSuccess0(DefaultPromise.java:605)
+	at io.netty.util.concurrent.DefaultPromise.trySuccess(DefaultPromise.java:104)
+	at io.netty.resolver.dns.DnsQueryContext.trySuccess(DnsQueryContext.java:201)
+	at io.netty.resolver.dns.DnsQueryContext.finish(DnsQueryContext.java:193)
+	at io.netty.resolver.dns.DnsNameResolver$DnsResponseHandler.channelRead(DnsNameResolver.java:1301)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:103)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.nio.AbstractNioMessageChannel$NioMessageUnsafe.read(AbstractNioMessageChannel.java:97)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 common frames omitted
+
+2021-10-11T22:54:16.377+0900  INFO 66080 --- [ionShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        [  62] : Unregistering application CONSUMER with eureka with status DOWN
+2021-10-11T22:54:16.384+0900  INFO 66080 --- [ionShutdownHook] com.netflix.discovery.DiscoveryClient    [1352] : Saw local status change event StatusChangeEvent [timestamp=1633960456384, current=DOWN, previous=UP]
+2021-10-11T22:54:16.386+0900  INFO 66080 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    [ 873] : DiscoveryClient_CONSUMER/172.30.1.35:consumer:5020: registering service...
+2021-10-11T22:54:16.405+0900  INFO 66080 --- [ionShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     [ 137] : Stopping...
+2021-10-11T22:54:16.405+0900  INFO 66080 --- [ionShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     [ 137] : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@293c7765]]
+2021-10-11T22:54:16.406+0900  INFO 66080 --- [ionShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     [ 137] : Stopped.
+2021-10-11T22:54:16.411+0900  INFO 66080 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    [ 882] : DiscoveryClient_CONSUMER/172.30.1.35:consumer:5020 - registration status: 204
+2021-10-11T22:54:16.414+0900  INFO 66080 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  [1038] : [Consumer clientId=consumer-group_json-1, groupId=group_json] Member consumer-group_json-1-5ce4cac5-f7e3-411f-9a64-b1cf7c4a15b3 sending LeaveGroup request to coordinator broker-1:9092 (id: 2147483646 rack: null) due to the consumer unsubscribed from all topics
+2021-10-11T22:54:16.418+0900  INFO 66080 --- [ntainer#0-0-C-1] o.a.k.clients.consumer.KafkaConsumer     [1070] : [Consumer clientId=consumer-group_json-1, groupId=group_json] Unsubscribed all topics or patterns and assigned partitions
+2021-10-11T22:54:16.437+0900  INFO 66080 --- [ntainer#0-0-C-1] org.apache.kafka.common.metrics.Metrics  [ 668] : Metrics scheduler closed
+2021-10-11T22:54:16.437+0900  INFO 66080 --- [ntainer#0-0-C-1] org.apache.kafka.common.metrics.Metrics  [ 672] : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2021-10-11T22:54:16.437+0900  INFO 66080 --- [ntainer#0-0-C-1] org.apache.kafka.common.metrics.Metrics  [ 678] : Metrics reporters closed
+2021-10-11T22:54:16.460+0900  INFO 66080 --- [ntainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     [  83] : App info kafka.consumer for consumer-group_json-1 unregistered
+2021-10-11T22:54:16.461+0900  INFO 66080 --- [ntainer#0-0-C-1] essageListenerContainer$ListenerConsumer [ 292] : group_json: Consumer stopped
+2021-10-11T22:54:16.470+0900  INFO 66080 --- [ionShutdownHook] o.s.i.endpoint.EventDrivenConsumer       [ 174] : Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2021-10-11T22:54:16.471+0900  INFO 66080 --- [ionShutdownHook] o.s.i.channel.PublishSubscribeChannel    [ 174] : Channel 'consumer.errorChannel' has 0 subscriber(s).
+2021-10-11T22:54:16.472+0900  INFO 66080 --- [ionShutdownHook] o.s.i.endpoint.EventDrivenConsumer       [ 292] : stopped bean '_org.springframework.integration.errorLogger'
+2021-10-11T22:54:16.683+0900  INFO 66080 --- [ionShutdownHook] com.netflix.discovery.DiscoveryClient    [ 935] : Shutting down DiscoveryClient ...
+2021-10-11T22:54:19.200+0900  INFO 66130 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  [1119] : [Consumer clientId=consumer-group_json-1, groupId=group_json] Attempt to heartbeat failed since group is rebalancing
+2021-10-11T22:54:19.204+0900  INFO 66130 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  [ 307] : [Consumer clientId=consumer-group_json-1, groupId=group_json] Revoke previously assigned partitions 
+2021-10-11T22:54:19.204+0900  INFO 66130 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    [ 292] : group_json: partitions revoked: []
+2021-10-11T22:54:19.205+0900  INFO 66130 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  [ 538] : [Consumer clientId=consumer-group_json-1, groupId=group_json] (Re-)joining group
+2021-10-11T22:54:19.221+0900  INFO 66130 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  [ 594] : [Consumer clientId=consumer-group_json-1, groupId=group_json] Successfully joined group with generation Generation{generationId=374, memberId='consumer-group_json-1-35ba85b8-506a-4417-aa93-55b92aab9c15', protocol='range'}
+2021-10-11T22:54:19.237+0900  INFO 66130 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  [ 754] : [Consumer clientId=consumer-group_json-1, groupId=group_json] Successfully synced group in generation Generation{generationId=374, memberId='consumer-group_json-1-35ba85b8-506a-4417-aa93-55b92aab9c15', protocol='range'}
+2021-10-11T22:54:19.242+0900  INFO 66130 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  [ 276] : [Consumer clientId=consumer-group_json-1, groupId=group_json] Notifying assignor about the new Assignment(partitions=[])
+2021-10-11T22:54:19.243+0900  INFO 66130 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  [ 288] : [Consumer clientId=consumer-group_json-1, groupId=group_json] Adding newly assigned partitions: 
+2021-10-11T22:54:19.243+0900  INFO 66130 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    [ 292] : group_json: partitions assigned: []
+2021-10-11T22:54:19.756+0900  INFO 66080 --- [ionShutdownHook] com.netflix.discovery.DiscoveryClient    [ 971] : Unregistering ...
+2021-10-11T22:54:19.820+0900  INFO 66080 --- [ionShutdownHook] com.netflix.discovery.DiscoveryClient    [ 973] : DiscoveryClient_CONSUMER/172.30.1.35:consumer:5020 - deregister  status: 200
+2021-10-11T22:54:19.848+0900  INFO 66080 --- [ionShutdownHook] com.netflix.discovery.DiscoveryClient    [ 960] : Completed shut down of DiscoveryClient
+2021-10-11T22:54:26.556+0900  INFO 66130 --- [nio-5020-exec-2] c.b.c.controller.CandleController        [  32] : 차트 데이터
+2021-10-11T22:54:26.615+0900  WARN 66130 --- [nio-5020-exec-2] .m.m.a.ExceptionHandlerExceptionResolver [ 207] : Resolved [org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to redis:6379]
+2021-10-11T22:54:27.323+0900  INFO 66130 --- [nio-5020-exec-3] c.b.c.controller.CandleController        [  32] : 차트 데이터
+2021-10-11T22:54:27.374+0900  WARN 66130 --- [nio-5020-exec-3] .m.m.a.ExceptionHandlerExceptionResolver [ 207] : Resolved [org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to redis:6379]
+2021-10-11T22:54:28.983+0900  INFO 66130 --- [tbeatExecutor-0] com.netflix.discovery.DiscoveryClient    [ 897] : DiscoveryClient_CONSUMER/172.30.1.35:consumer:5020 - Re-registering apps/CONSUMER
+2021-10-11T22:54:28.985+0900  INFO 66130 --- [tbeatExecutor-0] com.netflix.discovery.DiscoveryClient    [ 873] : DiscoveryClient_CONSUMER/172.30.1.35:consumer:5020: registering service...
+2021-10-11T22:54:28.994+0900  INFO 66130 --- [tbeatExecutor-0] com.netflix.discovery.DiscoveryClient    [ 882] : DiscoveryClient_CONSUMER/172.30.1.35:consumer:5020 - registration status: 204
+2021-10-11T22:54:41.525+0900  INFO 66130 --- [ionShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        [  62] : Unregistering application CONSUMER with eureka with status DOWN
+2021-10-11T22:54:41.528+0900  INFO 66130 --- [ionShutdownHook] com.netflix.discovery.DiscoveryClient    [1352] : Saw local status change event StatusChangeEvent [timestamp=1633960481528, current=DOWN, previous=UP]
+2021-10-11T22:54:41.529+0900  INFO 66130 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    [ 873] : DiscoveryClient_CONSUMER/172.30.1.35:consumer:5020: registering service...
+2021-10-11T22:54:41.550+0900  INFO 66130 --- [ionShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     [ 137] : Stopping...
+2021-10-11T22:54:41.552+0900  INFO 66130 --- [ionShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     [ 137] : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@1bcddcc9]]
+2021-10-11T22:54:41.552+0900  INFO 66130 --- [ionShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     [ 137] : Stopped.
+2021-10-11T22:54:41.552+0900  INFO 66130 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    [ 882] : DiscoveryClient_CONSUMER/172.30.1.35:consumer:5020 - registration status: 204
+2021-10-11T22:54:41.719+0900  INFO 66130 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  [1038] : [Consumer clientId=consumer-group_json-1, groupId=group_json] Member consumer-group_json-1-35ba85b8-506a-4417-aa93-55b92aab9c15 sending LeaveGroup request to coordinator broker-1:9092 (id: 2147483646 rack: null) due to the consumer unsubscribed from all topics
+2021-10-11T22:54:41.722+0900  INFO 66130 --- [ntainer#0-0-C-1] o.a.k.clients.consumer.KafkaConsumer     [1070] : [Consumer clientId=consumer-group_json-1, groupId=group_json] Unsubscribed all topics or patterns and assigned partitions
+2021-10-11T22:54:41.730+0900  INFO 66130 --- [ntainer#0-0-C-1] org.apache.kafka.common.metrics.Metrics  [ 668] : Metrics scheduler closed
+2021-10-11T22:54:41.730+0900  INFO 66130 --- [ntainer#0-0-C-1] org.apache.kafka.common.metrics.Metrics  [ 672] : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2021-10-11T22:54:41.731+0900  INFO 66130 --- [ntainer#0-0-C-1] org.apache.kafka.common.metrics.Metrics  [ 678] : Metrics reporters closed
+2021-10-11T22:54:41.749+0900  INFO 66130 --- [ntainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     [  83] : App info kafka.consumer for consumer-group_json-1 unregistered
+2021-10-11T22:54:41.756+0900  INFO 66130 --- [ntainer#0-0-C-1] essageListenerContainer$ListenerConsumer [ 292] : group_json: Consumer stopped
+2021-10-11T22:54:41.760+0900  INFO 66130 --- [ionShutdownHook] o.s.i.endpoint.EventDrivenConsumer       [ 174] : Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2021-10-11T22:54:41.761+0900  INFO 66130 --- [ionShutdownHook] o.s.i.channel.PublishSubscribeChannel    [ 174] : Channel 'consumer.errorChannel' has 0 subscriber(s).
+2021-10-11T22:54:41.762+0900  INFO 66130 --- [ionShutdownHook] o.s.i.endpoint.EventDrivenConsumer       [ 292] : stopped bean '_org.springframework.integration.errorLogger'
+2021-10-11T22:54:41.976+0900  INFO 66130 --- [ionShutdownHook] com.netflix.discovery.DiscoveryClient    [ 935] : Shutting down DiscoveryClient ...
+2021-10-11T22:54:44.993+0900  INFO 66130 --- [ionShutdownHook] com.netflix.discovery.DiscoveryClient    [ 971] : Unregistering ...
+2021-10-11T22:54:45.023+0900  INFO 66130 --- [ionShutdownHook] com.netflix.discovery.DiscoveryClient    [ 973] : DiscoveryClient_CONSUMER/172.30.1.35:consumer:5020 - deregister  status: 200
+2021-10-11T22:54:45.042+0900  INFO 66130 --- [ionShutdownHook] com.netflix.discovery.DiscoveryClient    [ 960] : Completed shut down of DiscoveryClient

@@ -19,6 +19,7 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponents;
 import org.springframework.web.util.UriComponentsBuilder;
 
+import javax.annotation.Resource;
 import java.io.IOException;
 import java.util.*;
 
@@ -27,12 +28,13 @@ import java.util.*;
 public class CandleServiceImpl implements CandleService {
     @Value("${property.candlestickuri}")
     private String uri;
-    private final RedisTemplate redisTemplate;
-
+    @Resource(name = "redisTemplate")
+    public ZSetOperations<String, CandleStick> zSetOperations;
     @Override
     public List<CandleStick> getCandleStickFromBithumb(String symbol, String chart_intervals) throws IOException {
         String url = uri+symbol+"_KRW/"+chart_intervals;
         UriComponents uri = UriComponentsBuilder.fromHttpUrl(url).build();
+        System.out.println(uri);
         String jsonInString = "";
         ObjectMapper mapper = new ObjectMapper();
         HttpHeaders header = new HttpHeaders();
@@ -52,7 +54,7 @@ public class CandleServiceImpl implements CandleService {
 
     @Override
     public List<CandleStick> getCandleStick(String symbol, String chart_intervals) throws IOException {
-        ZSetOperations zSetOperations = redisTemplate.opsForZSet();
+//        ZSetOperations zSetOperations = redisTemplate.opsForZSet();
         Set<ZSetOperations.TypedTuple<CandleStick>> rankSet= zSetOperations.rangeWithScores(symbol+"_"+chart_intervals,0,-1);
         return CandleStick.ofIterater(rankSet);
     }
